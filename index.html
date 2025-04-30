@@ -6,9 +6,7 @@
   <title>Software Engineer | Your Name</title>
   <style>
     /* Base styles */
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -18,15 +16,6 @@
       transition: background-color 0.3s, color 0.3s;
     }
     a { text-decoration: none; color: inherit; }
-
-    /* Dark mode */
-    body.dark {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    body.dark header { background: #1e1e1e; border-color: #333; }
-    body.dark .project-card, body.dark .tech-badge { background: #1e1e1e; border-color: #333; }
-    body.dark footer { border-top-color: #333; }
 
     /* Navbar */
     header {
@@ -39,39 +28,61 @@
       z-index: 100;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0 2rem;
     }
     nav ul {
-      list-style: none; display: flex; gap: 2rem; margin: 0;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 1rem 0;
     }
-    nav li a { font-weight: bold; color: #007bff; padding: 0.5rem; transition: color 0.3s; }
-    nav li a:hover { color: #0056b3; }
-    .toggle-btn {
-      cursor: pointer;
-      font-size: 1.2rem;
-      background: none;
-      border: none;
+    nav li a {
+      font-weight: bold;
       color: #007bff;
+      padding: 0.5rem;
       transition: color 0.3s;
     }
-    .toggle-btn:hover { color: #0056b3; }
+    nav li a:hover { color: #0056b3; }
 
     /* Sections */
     section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
     #home { padding-top: 8rem; text-align: center; }
 
     /* Projects */
-    #projects .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
-    .project-card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: background 0.3s, border-color 0.3s; }
+    #projects .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: background 0.3s, border-color 0.3s;
+    }
     .project-card h3 { margin-top: 0; }
     .project-card a { color: #007bff; }
 
     /* About */
-    #about .profile-pic { float: left; margin: 0 1.5rem 1rem 0; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; }
+    #about .profile-pic {
+      float: left;
+      margin: 0 1.5rem 1rem 0;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
     /* Technologies */
-    #technologies .tech-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    #technologies .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
     .tech-badge {
       display: inline-block;
       padding: 0.5rem 0.75rem;
@@ -86,7 +97,14 @@
     #contact .contact-list li { margin-bottom: 0.5rem; }
 
     /* Footer */
-    footer { text-align: center; padding: 2rem 0; border-top: 1px solid #eee; margin-top: 4rem; color: #777; transition: border-color 0.3s; }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #eee;
+      margin-top: 4rem;
+      color: #777;
+      transition: border-color 0.3s;
+    }
   </style>
 </head>
 <body>
@@ -100,7 +118,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button class="toggle-btn" id="darkModeToggle">🌙</button>
   </header>
 
   <section id="home">
@@ -160,15 +177,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 MiViGe. All rights reserved.
   </footer>
-
-  <script>
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-    });
-  </script>
 </body>
 </html>
