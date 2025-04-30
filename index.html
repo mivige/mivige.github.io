@@ -67,6 +67,37 @@
     .project-card h3 { margin-top: 0; }
     .project-card a { color: #007bff; }
 
+    /* Portfolio */
+    #portfolio {
+      padding-top: 6rem;
+    }
+    #portfolio .portfolio-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .portfolio-card {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: border-color 0.3s;
+    }
+    .portfolio-img {
+      flex: 1 1 40%;
+      max-width: 300px;
+      object-fit: cover;
+    }
+    .portfolio-content {
+      flex: 1 1 60%;
+      padding: 1.5rem;
+    }
+    .portfolio-content h3 { margin-top: 0; }
+    .portfolio-content a { color: #007bff; }
+
     /* About */
     #about .profile-pic {
       float: left;
@@ -113,6 +144,7 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#technologies">Technologies</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -131,8 +163,30 @@
     <p>I’m a passionate developer with X years of experience in web and application development. I enjoy solving complex problems and continuously learning new technologies. When I’m not coding, I love hiking and photography.</p>
   </section>
 
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="portfolio1.jpg" alt="Portfolio Item 1" class="portfolio-img">
+        <div class="portfolio-content">
+          <h3>Portfolio Item One</h3>
+          <p>Brief description of the portfolio item. Highlight features, context, and outcomes.</p>
+          <a href="#">View Details</a>
+        </div>
+      </div>
+      <div class="portfolio-card">
+        <img src="portfolio2.jpg" alt="Portfolio Item 2" class="portfolio-img">
+        <div class="portfolio-content">
+          <h3>Portfolio Item Two</h3>
+          <p>Brief description of the portfolio item. Highlight features, context, and outcomes.</p>
+          <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Personal Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
         <h3>Project One</h3>
@@ -177,7 +231,7 @@
   </section>
 
   <footer>
-    &copy; 2025 MiViGe. All rights reserved.
+    &copy; 2025 Your Name. All rights reserved.
   </footer>
 </body>
 </html>
