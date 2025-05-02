@@ -86,6 +86,7 @@ section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
   object-fit: cover;
   object-position: center center;
   display: block;
+  padding: 1.5rem;
 }
 .portfolio-content {
   flex: 1 1 60%;
