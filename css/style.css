@@ -80,9 +80,12 @@ section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
   transition: border-color 0.3s;
 }
 .portfolio-img {
-  flex: 1 1 40%;
-  max-width: 300px;
+  flex: 1 1 100%;
+  max-width: none;
+  width: 100%;
   object-fit: cover;
+  object-position: center center;
+  display: block;
 }
 .portfolio-content {
   flex: 1 1 60%;
