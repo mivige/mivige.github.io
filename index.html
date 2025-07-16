@@ -7,16 +7,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">MiViGe</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <div class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </div>
+          <div class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </div>
+          <div class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </div>
+          <div class="nav-item">
+            <a href="#technologies" class="nav-link">Technologies</a>
+          </div>
+          <div class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </div>
+        <div class="nav-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -124,5 +146,39 @@
   <footer>
     &copy; 2025 MiViGe. All rights reserved.
   </footer>
+
+  <script>
+    // Mobile menu toggle functionality
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', function() {
+      mobileMenu.classList.toggle('is-active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link (for mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

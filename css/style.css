@@ -11,7 +11,7 @@ body {
 a { text-decoration: none; color: inherit; }
 
 /* Navbar */
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,25 +19,107 @@ header {
   border-bottom: 1px solid #eee;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 100;
+}
+
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   padding: 0 2rem;
 }
-nav ul {
-  list-style: none;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-menu {
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 1rem 0;
 }
-nav li a {
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
   font-weight: bold;
   color: #007bff;
   padding: 0.5rem;
   transition: color 0.3s;
+  text-decoration: none;
 }
-nav li a:hover { color: #0056b3; }
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 
 /* Sections */
 section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
