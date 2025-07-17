@@ -10,6 +10,23 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin: 0.67em 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1em 0;
+}
+
 /* Navbar */
 .header {
   position: fixed;
