@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mivige.github.io/sitemap.xml
+
+# Allow all crawlers to access the main content
+Allow: /index.html
+Allow: /css/
+Allow: /assets/
+
+# Disallow crawling of any potential system files (if they exist)
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /node_modules/
+
+# Additional information
+# This website belongs to Michele Gentile (MiViGe)
+# Software Engineer Portfolio - https://mivige.github.io
