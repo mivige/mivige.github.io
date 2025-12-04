@@ -94,8 +94,15 @@
       }
     }
   </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
   <header class="header">
     <nav class="navbar">
       <div class="nav-container">
@@ -131,19 +138,19 @@
     </nav>
   </header>
 
-  <section id="home">
+  <section id="home" data-aos="fade-right">
     <h1>Michele Gentile</h1>
     <p>Hi! I’m a Software Engineer specializing mostly in embedded systems and machine learning. Welcome to my personal website.</p>
 	<p><!--<a href="assets/Gentile_MicheleVincenzo_CV.pdf" download>↓ Download CV</a></br>--><a href="assets/Gentile_MicheleVincenzo_CV.pdf" target="_blank">⌕ View CV</a></p>
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <h2>About Me</h2>
     <img src="assets/profile_pic.jpeg" alt="My Photo" class="profile-pic">
     <p>I’m a passionate Computer Science student at Sapienza University of Rome. I enjoy spending time on practical problems and continuously learning new technologies. When I’m not coding, I love hiking, running and motorcycling.</p>
   </section>
 
-  <section id="portfolio">
+  <section id="portfolio" data-aos="fade-right">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-card">
@@ -166,7 +173,7 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-right">
     <h2>Personal Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
@@ -207,7 +214,7 @@
     </div>
   </section>
 
-  <section id="technologies">
+  <section id="technologies" data-aos="fade-right">
     <h2>Technologies & Skills</h2>
     <div class="tech-grid">
       <span class="tech-badge">C++</span>
@@ -243,7 +250,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-right">
     <h2>Contacts</h2>
     <ul class="contact-list">
       <li>Email: <a href="mailto:michele.gentile2604@gmail.com">michele.gentile2604@gmail.com</a></li>
@@ -287,6 +294,12 @@
           });
         }
       });
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true,    // Whether animation should happen only once
     });
   </script>
 </body>
