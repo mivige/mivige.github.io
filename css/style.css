@@ -237,10 +237,20 @@ section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
 #about .profile-pic {
   float: left;
   margin: 0 1.5rem 1rem 0;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  shape-outside: circle(); /* Helps text wrap nicely around the circle */
+  border: 3px solid rgba(255, 255, 255, 0.8); /* Clean white rim */
+  box-shadow: 0 0 20px rgba(14, 165, 164, 0.5); /* Teal Glow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Interaction */
+#about .profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(14, 165, 164, 0.8); /* Glow gets intense */
 }
 
 /* Technologies */
