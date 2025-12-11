@@ -488,3 +488,112 @@ footer {
   box-shadow: 0 6px 20px rgba(14, 165, 164, 0.5); /* Glow gets stronger */
   transform: translateY(-3px); /* Lifts up */
 }
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 20px; 
+  border-radius: 2px;
+}
+
+.timeline-item {
+  padding: 10px 40px; 
+  padding-left: 60px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 11px; 
+  background-color: #fff;
+  border: 4px solid var(--primary);
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover::after {
+  background-color: var(--primary);
+  transform: scale(1.2);
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 10px 20px rgba(14, 165, 164, 0.15);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--primary-600);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 1.25rem;
+}
+
+.timeline-content h4 {
+  margin: 0 0 1rem 0;
+  color: #555;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 10px;
+  }
+  
+  .timeline-item::after {
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    top: 18px;
+  }
+  
+  .timeline-item {
+    padding-left: 40px;
+    padding-right: 0;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-content h3 { font-size: 1.1rem; }
+  .timeline-content h4 { font-size: 0.9rem; }
+}
