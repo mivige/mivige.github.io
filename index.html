@@ -94,8 +94,15 @@
       }
     }
   </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
   <header class="header">
     <nav class="navbar">
       <div class="nav-container">
@@ -110,7 +117,7 @@
             <a href="#about" class="nav-link">About</a>
           </div>
           <div class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#experience" class="nav-link">Experience</a>
           </div>
           <div class="nav-item">
             <a href="#projects" class="nav-link">Projects</a>
@@ -131,19 +138,57 @@
     </nav>
   </header>
 
-  <section id="home">
+  <section id="home" data-aos="fade-right">
     <h1>Michele Gentile</h1>
     <p>Hi! I’m a Software Engineer specializing mostly in embedded systems and machine learning. Welcome to my personal website.</p>
-	<p><!--<a href="assets/Gentile_MicheleVincenzo_CV.pdf" download>↓ Download CV</a></br>--><a href="assets/Gentile_MicheleVincenzo_CV.pdf" target="_blank">⌕ View CV</a></p>
+    <div class="cta-container">
+      <a href="assets/Gentile_MicheleVincenzo_CV.pdf" target="_blank" class="cta-button">
+        View CV
+      </a>
+    </div>
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <h2>About Me</h2>
     <img src="assets/profile_pic.jpeg" alt="My Photo" class="profile-pic">
-    <p>I’m a passionate Computer Science student at Sapienza University of Rome. I enjoy spending time on practical problems and continuously learning new technologies. When I’m not coding, I love hiking, running and motorcycling.</p>
+    <p>I’m a passionate Computer Science student at <strong>Sapienza University of Rome</strong>. My journey includes international experiences at <strong>Universidade NOVA de Lisboa</strong> and <strong>UIB</strong>, shaping my global perspective. I enjoy spending time on practical problems and continuously learning new technologies. When I’m not coding, I love hiking, running and motorcycling.</p>
   </section>
 
-  <section id="portfolio">
+  <section id="experience" data-aos="fade-right">
+    <h2>Experience</h2>
+    <div class="timeline">
+      
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Dec 2023 - Present</span>
+          <h3>Head of Marketing & Design</h3>
+          <h4>Sapienza Gladiators Racing Team</h4>
+          <p>Leading a team of 8 people to define brand strategy and event promotion. Secured ~60k€ in sponsorships and grew Instagram (+16.4%) through organic campaigns with no dedicated budget.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Dec 2023 - Nov 2024</span>
+          <h3>Software Engineer</h3>
+          <h4>Sapienza Fast Charge Racing Team</h4>
+          <p>Developed firmware for autonomous vehicle control using <strong>Simulink</strong> and <strong>Speedgoat</strong>, reducing latency by 75% (from 2s to <0.5s) and achieving zero communication errors. Implemented real-time communication solutions on <strong>embedded systems</strong>, managing 200Hz data flow between processing platforms, sensors, and actuators. Additionally, designed and integrated HMIs for Formula SAE vehicles using <strong>Arduino</strong> and <strong>Nextion</strong>, reducing dashboard interaction time by 40%.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Dec 2023 - Sep 2024</span>
+          <h3>IT Support</h3>
+          <h4>Italian Ministry of Justice</h4>
+          <p>Managed data for 491 social inclusion projects and developed a nationwide questionnaire that streamlined the Inclusion Allowance request process, improving application speed by 84%.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="portfolio" data-aos="fade-right">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-card">
@@ -166,28 +211,48 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-right">
     <h2>Personal Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Project One</h3>
-        <p>Short description of the project. Technologies: HTML, CSS, JavaScript.</p>
-        <a href="#">View on GitHub</a>
+        <h3>DeReK - AI Voice Agent</h3>
+        <p>Built in 32h at Lisbon AI Week. An AI voice agent that automates data and emotion detection during insurance calls using OpenAI, Vosk, and ElevenLabs.</p>
+        <a href="https://github.com/mivige" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
+      
       <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Short description of the project. Technologies: React, Node.js.</p>
-        <a href="#">View on GitHub</a>
+        <h3>PlantinoCare</h3>
+        <p>A complete plant-management system built for Arduino Day 2023: sensors feed data into a Python middleware, stored in MySQL, and visualised via a web app (including graphs and automated watering/light control).</p>
+        <a href="https://github.com/mivige/PlantinoCare" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
+
       <div class="project-card">
-        <h3>Project Three</h3>
-        <p>Short description of the project. Technologies: Python, Flask.</p>
-        <a href="#">View on GitHub</a>
+        <h3>FileOrganizer</h3>
+        <p>A Python script that helps you organise files in a specified directory based on criteria such as file type, date or file size.</p>
+        <a href="https://github.com/mivige/FileOrganizer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>IntegrityMonitor</h3>
+        <p>A PowerShell-based file-integrity monitor. Monitors a folder for changes (added, deleted or modified files) and triggers alerts accordingly.</p>
+        <a href="https://github.com/mivige/IntegrityMonitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>TotCloudApp</h3>
+        <p>A PHP application that enables generation, configuration and deployment of PaaS/SaaS components. Aimed at simplifying how end-users can set up services.</p>
+        <a href="https://github.com/mivige/TotCloudApp" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>JPokeBattle</h3>
+        <p>A Java game clone of Pokémon battle mechanics. Custom graphics and a battle system implemented in Java.</p>
+        <a href="https://github.com/mivige/JPokeBattle" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <section id="technologies">
+  <section id="technologies" data-aos="fade-right">
     <h2>Technologies & Skills</h2>
     <div class="tech-grid">
       <span class="tech-badge">C++</span>
@@ -223,7 +288,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-right">
     <h2>Contacts</h2>
     <ul class="contact-list">
       <li>Email: <a href="mailto:michele.gentile2604@gmail.com">michele.gentile2604@gmail.com</a></li>
@@ -271,5 +336,11 @@
   </script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1e469c717a004f1fa8ff47b44364a917"}'></script>
+  <script>
+    AOS.init({
+      duration: 800, // Animation duration
+      once: true,    // Whether animation should happen only once
+    });
+  </script>
 </body>
 </html>
