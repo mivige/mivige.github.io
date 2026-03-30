@@ -1,29 +1,38 @@
 /* Projects */
 #projects .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
+
 .project-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: background 0.3s, border-color 0.3s;
 }
-.project-card h3 { margin-top: 0; }
-.project-card a { color: #007bff; }
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  color: #007bff;
+}
 
 /* Portfolio */
 #portfolio {
   padding-top: 6rem;
 }
+
 #portfolio .portfolio-grid {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 .portfolio-card {
   display: flex;
   flex-wrap: wrap;
@@ -31,9 +40,10 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: border-color 0.3s;
 }
+
 .portfolio-img {
   flex: 1 1 100%;
   max-width: none;
@@ -43,29 +53,44 @@
   display: block;
   padding: 1.5rem;
 }
+
 .portfolio-content {
   flex: 1 1 60%;
   padding: 1.5rem;
 }
-.portfolio-content h3 { margin-top: 0; }
-.portfolio-content a { color: #007bff; }
 
-.project-card, .portfolio-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth 'snap' effect */
-    position: relative;
-    z-index: 1;
+.portfolio-content h3 {
+  margin-top: 0;
 }
-.project-card:hover, .portfolio-card:hover {
+
+.portfolio-content a {
+  color: #007bff;
+}
+
+.project-card,
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Smooth 'snap' effect */
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover,
+.portfolio-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15); /* Soft teal shadow */
-  border-color: var(--primary); /* Highlights the border in teal */
-  background: rgba(255, 255, 255, 0.85); /* Becomes slightly less transparent */
+  box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15);
+  /* Soft teal shadow */
+  border-color: var(--primary);
+  /* Highlights the border in teal */
+  background: rgba(255, 255, 255, 0.85);
+  /* Becomes slightly less transparent */
 }
+
 .portfolio-card:hover .portfolio-img {
   transform: scale(1.02);
   transition: transform 0.4s ease;
@@ -79,16 +104,20 @@
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  shape-outside: circle(); /* Helps text wrap nicely around the circle */
-  border: 3px solid rgba(255, 255, 255, 0.8); /* Clean white rim */
-  box-shadow: 0 0 20px rgba(14, 165, 164, 0.5); /* Teal Glow */
+  shape-outside: circle();
+  /* Helps text wrap nicely around the circle */
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  /* Clean white rim */
+  box-shadow: 0 0 20px rgba(14, 165, 164, 0.5);
+  /* Teal Glow */
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Hover Interaction */
 #about .profile-pic:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 35px rgba(14, 165, 164, 0.8); /* Glow gets intense */
+  box-shadow: 0 0 35px rgba(14, 165, 164, 0.8);
+  /* Glow gets intense */
 }
 
 /* Technologies & Skills Grid */
@@ -99,23 +128,24 @@
   justify-content: center;
   padding: 1rem 0;
 }
+
 .tech-badge {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
-  
+
   /* Glass Effect */
-  background: rgba(255, 255, 255, 0.4); 
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  
+
   /* Typography & Layout */
   font-weight: 500;
   color: #374151;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
-  
+
   cursor: default;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
@@ -123,16 +153,23 @@
 }
 
 .tech-badge:hover {
-  background: rgba(255, 255, 255, 0.95); 
-  transform: translateY(-4px) scale(1.05); 
-  border-color: var(--primary); 
-  color: var(--primary-600); 
-  box-shadow: 0 8px 20px rgba(14, 165, 164, 0.25); 
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--primary);
+  color: var(--primary-600);
+  box-shadow: 0 8px 20px rgba(14, 165, 164, 0.25);
 }
 
 @keyframes popIn {
-  0% { opacity: 0; transform: scale(0.5) translateY(20px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* Contact */
@@ -154,7 +191,7 @@
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
-  
+
   /* 2. SPACING & LAYOUT */
   padding: 1rem 1.5rem;
   font-size: 1.05rem;
@@ -165,14 +202,17 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   position: relative;
-  
+
   /* 3. INTERACTION */
   transition: all 0.3s ease;
   cursor: default;
 
-  overflow-wrap: break-word;   /* Standard way to break long words */
-  word-wrap: break-word;       /* Legacy support */
-  hyphens: auto;               /* Adds hyphens if possible */
+  overflow-wrap: break-word;
+  /* Standard way to break long words */
+  word-wrap: break-word;
+  /* Legacy support */
+  hyphens: auto;
+  /* Adds hyphens if possible */
 }
 
 .copy-btn {
@@ -206,9 +246,11 @@
 /* Hover Effect for the whole row */
 #contact .contact-list li:hover {
   background: rgba(255, 255, 255, 0.95);
-  transform: translateX(10px); /* Slides slightly to the right */
+  transform: translateX(10px);
+  /* Slides slightly to the right */
   border-color: var(--primary);
-  box-shadow: 0 5px 15px rgba(14, 165, 164, 0.2); /* Teal shadow */
+  box-shadow: 0 5px 15px rgba(14, 165, 164, 0.2);
+  /* Teal shadow */
 }
 
 @media screen and (max-width: 480px) {
@@ -221,7 +263,7 @@
     text-align: center;
     gap: 0.2rem;
   }
-  
+
   #contact .contact-list li a {
     margin-left: 0;
   }
@@ -239,11 +281,11 @@
   font-weight: bold;
   text-decoration: none;
   border-radius: 50px;
-  
+
   background: var(--primary);
   color: #ffffff;
   border: 2px solid var(--primary);
-  
+
   box-shadow: 0 4px 15px rgba(14, 165, 164, 0.3);
   transition: all 0.3s ease;
 }
@@ -255,112 +297,141 @@
   transform: translateY(-3px);
 }
 
-/* Timeline */
 .timeline {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* Controls spacing between items */
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background-color: var(--primary);
-  top: 0;
-  bottom: 0;
-  left: 20px; 
-  border-radius: 2px;
+.timeline::after,
+.timeline-item::after {
+  display: none !important;
 }
 
 .timeline-item {
-  padding: 10px 40px; 
-  padding-left: 60px;
-  position: relative;
-  background-color: inherit;
+  background: transparent;
+  padding: 0;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  left: 11px; 
-  background-color: #fff;
-  border: 4px solid var(--primary);
-  top: 20px;
-  border-radius: 50%;
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.timeline-item:hover::after {
-  background-color: var(--primary);
-  transform: scale(1.2);
 }
 
 .timeline-content {
-  padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  /* Smoother corner */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 4px solid var(--primary);
+  /* A clean left accent replaces the external track */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+
+  /* CSS Grid to put Date on the Right of the Title */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+/* Subtle inner glow */
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(14, 165, 164, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .timeline-content:hover {
-  transform: translateX(5px);
-  box-shadow: 0 10px 20px rgba(14, 165, 164, 0.15);
+  transform: translateY(-3px);
+  border-left-width: 8px;
+  /* Accent bar grows smoothly */
+  box-shadow: 0 8px 20px rgba(14, 165, 164, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.timeline-content:hover::before {
+  opacity: 1;
 }
 
 .timeline-date {
-  font-size: 0.9rem;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  font-size: 0.8rem;
+  /* Scaled down */
   color: var(--primary-600);
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  background: rgba(14, 165, 164, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .timeline-content h3 {
-  margin-top: 0;
-  margin-bottom: 0.2rem;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0 0 0.5rem 0;
+  padding-right: 1.5rem;
+  /* Gap buffer so long titles don't touch the date pill */
   font-size: 1.25rem;
+  /* Scaled down */
+  color: #111827;
+}
+
+.timeline-content>*:not(h3):not(.timeline-date) {
+  grid-column: 1 / -1;
 }
 
 .timeline-content h4 {
-  margin: 0 0 1rem 0;
-  color: #555;
-  font-weight: 600;
-  font-size: 1rem;
+  margin: 0 0 0.8rem 0;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.95rem;
+  /* Scaled down */
+}
+
+.timeline-content p,
+.timeline-content ul {
+  position: relative;
+  z-index: 1;
+  color: #374151;
+  font-size: 0.9rem;
+  /* Scaled down text */
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  .timeline::after {
-    left: 10px;
+  .timeline-content {
+    padding: 1rem 1.2rem;
+    grid-template-columns: 1fr;
+    /* Switch to single column on mobile */
   }
-  
-  .timeline-item::after {
-    left: 1px;
-    width: 14px;
-    height: 14px;
-    top: 18px;
+
+  .timeline-date {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    /* Put date back on the left */
+    margin-bottom: 0.6rem;
   }
-  
-  .timeline-item {
-    padding-left: 40px;
+
+  .timeline-content h3 {
+    grid-column: 1;
+    grid-row: 2;
     padding-right: 0;
   }
-  
-  .timeline-content {
-    padding: 15px;
-  }
-  
-  .timeline-content h3 { font-size: 1.1rem; }
-  .timeline-content h4 { font-size: 0.9rem; }
 }
