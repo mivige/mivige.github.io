@@ -159,6 +159,12 @@
   padding: 1rem 1.5rem;
   font-size: 1.05rem;
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  position: relative;
   
   /* 3. INTERACTION */
   transition: all 0.3s ease;
@@ -167,6 +173,27 @@
   overflow-wrap: break-word;   /* Standard way to break long words */
   word-wrap: break-word;       /* Legacy support */
   hyphens: auto;               /* Adds hyphens if possible */
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  margin-left: 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: rgba(14, 165, 164, 0.1);
+  color: var(--primary);
+  transform: scale(1.1);
+
 }
 
 #contact .contact-list li a {

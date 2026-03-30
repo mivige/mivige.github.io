@@ -2,11 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/404.html">
-  <script>window.location.replace("/404.html");</script>
-  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts | MiViGe</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  
+  <!-- Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <p>Redirecting to <a href="/404.html">Work in progress page</a>...</p>
+  <!-- Background Animation -->
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Main Content -->
+  <main style="min-height: 70vh; padding-top: 120px; display: flex; flex-direction: column; justify-content: center; overflow-x: hidden;">
+    <section id="contact" data-aos="fade-up" style="padding-top: 0; width: 100%; max-width: 800px; margin: 0 auto; box-sizing: border-box;">
+      <h1 style="text-align: center; font-size: 3rem; margin-bottom: 2rem; color: var(--primary);">Get In Touch</h1>
+      <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #555;">
+        Feel free to reach out to me for collaborations, inquiries, or just to say hi!
+      </p>
+      
+      <ul class="contact-list">
+        <li>
+          <span>Email:</span> <a href="mailto:michele.gentile2604@gmail.com">michele.gentile2604@gmail.com</a>
+          <button class="copy-btn" onclick="copyEmail()" title="Copy email address" aria-label="Copy email address">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </li>
+        <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/mivige" target="_blank">linkedin.com/in/mivige</a></li>
+        <li><span>GitHub:</span> <a href="https://github.com/mivige" target="_blank">github.com/mivige</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+
+    function copyEmail() {
+      navigator.clipboard.writeText('michele.gentile2604@gmail.com').then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const originalIcon = btn.innerHTML;
+        // Checkmark icon
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        btn.style.color = 'var(--primary)';
+        
+        setTimeout(() => {
+          btn.innerHTML = originalIcon;
+          btn.style.color = '';
+        }, 2000);
+      });
+    }
+  </script>
 </body>
 </html>
