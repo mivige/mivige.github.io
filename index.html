@@ -8,8 +8,10 @@
   <meta name="author" content="Michele Gentile">
   <meta name="google-site-verification" content="86bQBbSvEpQWPVmf86wODGkFGmX292RN2RgVuzgsAZE" />
   <title>Software Engineer | MiViGe</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
   
   <!-- Structured Data / Schema Markup -->
@@ -22,7 +24,7 @@
       "jobTitle": "Software Engineer",
       "description": "Software Engineer specializing in embedded systems and machine learning. Computer Science student at Sapienza University of Rome.",
       "url": "https://mivige.github.io",
-      "image": "https://mivige.github.io/assets/profile_pic.jpeg",
+      "image": "https://mivige.github.io/assets/img/profile.jpg",
       "sameAs": [
         "https://www.linkedin.com/in/mivige",
         "https://github.com/mivige"
@@ -103,46 +105,13 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
   </div>
-  <header class="header">
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="#home">MiViGe</a>
-        </div>
-        <div class="nav-menu" id="nav-menu">
-          <div class="nav-item">
-            <a href="#home" class="nav-link">Home</a>
-          </div>
-          <div class="nav-item">
-            <a href="#about" class="nav-link">About</a>
-          </div>
-          <div class="nav-item">
-            <a href="#experience" class="nav-link">Experience</a>
-          </div>
-          <div class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </div>
-          <div class="nav-item">
-            <a href="#technologies" class="nav-link">Technologies</a>
-          </div>
-          <div class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </div>
-        </div>
-        <div class="nav-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-    </nav>
-  </header>
 
+  <div id="header-placeholder"></div>
   <section id="home" data-aos="fade-right">
     <h1>Michele Gentile</h1>
     <p>Hi! I’m a Software Engineer specializing mostly in embedded systems and machine learning. Welcome to my personal website.</p>
     <div class="cta-container">
-      <a href="assets/Gentile_MicheleVincenzo_CV.pdf" target="_blank" class="cta-button">
+      <a href="assets/docs/Gentile_MicheleVincenzo_CV.pdf" target="_blank" class="cta-button">
         View CV
       </a>
     </div>
@@ -150,7 +119,7 @@
 
   <section id="about" data-aos="fade-right">
     <h2>About Me</h2>
-    <img src="assets/profile_pic.jpeg" alt="My Photo" class="profile-pic">
+    <img src="assets/img/profile.jpg" alt="My Photo" class="profile-pic">
     <p>I’m a passionate Computer Science student at <strong>Sapienza University of Rome</strong>. My journey includes international experiences at <strong>Universidade NOVA de Lisboa</strong> and <strong>UIB</strong>, shaping my global perspective. I enjoy spending time on practical problems and continuously learning new technologies. When I’m not coding, I love hiking, running and motorcycling.</p>
   </section>
 
@@ -192,7 +161,7 @@
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
       <div class="portfolio-card">
-        <img src="assets/gladiators_logo.svg" alt="Portfolio Item 1" class="portfolio-img">
+        <img src="assets/img/gladiators_logo.svg" alt="Portfolio Item 1" class="portfolio-img">
         <div class="portfolio-content">
           <h3>Sapienza Gladiators Racing Team</h3>
           <p>Worked on the revamp of the website of the team, updating race results, prototypes, team presentations and photo galleries for freshness, working closely with the team leadership to ensure that the website effectively presented vital information, resources, and brand identity.
@@ -297,43 +266,8 @@
     </ul>
   </section>
 
-  <footer>
-    &copy; 2025 MiViGe. All rights reserved.
-  </footer>
-
-  <script>
-    // Mobile menu toggle functionality
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
-
-    mobileMenu.addEventListener('click', function() {
-      mobileMenu.classList.toggle('is-active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a nav link (for mobile)
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('is-active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-  </script>
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1e469c717a004f1fa8ff47b44364a917"}'></script>
   <script>

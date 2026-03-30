@@ -1,0 +1,64 @@
+/* Base styles */
+html { scroll-behavior: smooth; }
+
+/* Theme tokens (easy to tweak palette) */
+:root {
+  --bg-start: #eef6ff;
+  --bg-mid: #f7fbff;
+  --bg-end: #ffffff;
+  --primary: #0ea5a4; /* accent (teal) - change this to try other looks */
+  --primary-600: #0b948f;
+  --muted: #6b7280;
+  --nav-bg: rgba(255,255,255,0.72);
+  --nav-border: rgba(15, 23, 42, 0.06);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-mid) 60%, var(--bg-end) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Subtle light spots and texture overlay to give depth */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  /* Layered soft highlights + very subtle repeating pattern */
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(255,255,255,0.6), rgba(255,255,255,0) 18%),
+    radial-gradient(circle at 90% 85%, rgba(255,255,255,0.35), rgba(255,255,255,0) 20%),
+    repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 1px, rgba(0,0,0,0) 1px 10px);
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+  z-index: -1; /* keep it behind the page content */
+}
+
+/* Respect users who prefer reduced motion or simpler visuals */
+@media (prefers-reduced-motion: reduce) {
+  body::before { opacity: 0.7; }
+}
+a { text-decoration: none; color: inherit; }
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin: 0.67em 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1em 0;
+}

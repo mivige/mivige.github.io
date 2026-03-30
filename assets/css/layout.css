@@ -1,0 +1,172 @@
+/* Sections */
+section { padding: 6rem 2rem 2rem; max-width: 800px; margin: 0 auto; }
+#home { padding-top: 8rem; text-align: center; }
+
+/* Navbar */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* modern glassy header that uses the theme token */
+  background: var(--nav-bg);
+  backdrop-filter: blur(8px) saturate(110%);
+  -webkit-backdrop-filter: blur(8px) saturate(110%);
+  border-bottom: 1px solid var(--nav-border);
+  box-shadow: 0 6px 18px rgba(12, 22, 45, 0.06);
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: rgba(0,0,0,0.75);
+  padding: 0.5rem;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--primary-600);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.95);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 4rem;
+  color: #777;
+  transition: border-color 0.3s;
+}
+
+/* Container for the background */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Keeps it behind everything */
+  overflow: hidden;
+  background: #f7fbff; /* Base color */
+}
+
+/* Common orb style */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* This creates the soft "glow" effect */
+  opacity: 0.6;
+  animation: float 20s infinite ease-in-out alternate;
+}
+
+/* Orb 1: The Teal Accent */
+.orb-1 {
+  width: 50vw;
+  height: 50vw;
+  background: var(--primary); /* Uses your teal color */
+  top: -10%;
+  left: -10%;
+}
+
+/* Orb 2: A Complementary Blue */
+.orb-2 {
+  width: 40vw;
+  height: 40vw;
+  background: #4facfe;
+  bottom: -10%;
+  right: -10%;
+  animation-duration: 25s; /* Different speed for randomness */
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(50px, 50px) rotate(20deg); }
+}
