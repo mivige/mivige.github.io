@@ -435,3 +435,178 @@
     padding-right: 0;
   }
 }
+
+/* ==========================================================================
+   Project Page Specific Styles
+   ========================================================================== */
+
+/* Featured Projects Showcase */
+.projects-showcase-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.showcase-card {
+  display: flex;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  min-height: 250px;
+}
+
+.showcase-card.rev {
+  flex-direction: row-reverse;
+}
+
+.showcase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15);
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.showcase-img {
+  flex: 0 0 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.showcase-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-card:hover .showcase-img img,
+.showcase-card:hover .showcase-img div {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.showcase-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.showcase-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Tech Pills (for projects) */
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-pills span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  background: rgba(14, 165, 164, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* Action Buttons within Projects */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.project-actions a.small-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.project-actions a.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.project-actions a.outline:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(14, 165, 164, 0.3);
+}
+
+/* Grid for smaller projects */
+.projects-grid.extra {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.projects-grid.extra .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-grid.extra .project-card p {
+  flex-grow: 1;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.projects-grid.extra .project-actions {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.projects-grid.extra .project-actions a {
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.projects-grid.extra .project-actions a:hover {
+  color: var(--primary-600);
+  transform: translateX(3px);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .showcase-card, .showcase-card.rev {
+    flex-direction: column;
+  }
+  
+  .showcase-img {
+    height: 200px;
+    flex: none;
+  }
+
+  .projects-grid.extra {
+    grid-template-columns: 1fr;
+  }
+}

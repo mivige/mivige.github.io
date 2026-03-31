@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michele Gentile (MiViGe) - Projects and Portfolio">
+  <title>Projects | MiViGe</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  
+  <!-- Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Background Animation -->
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div id="header-placeholder"></div>
+
+  <!-- Main Content -->
+  <main style="padding-top: 120px; min-height: 80vh;">
+    
+    <section id="featured-projects" data-aos="fade-up" style="padding-top: 0;">
+      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; color: var(--primary);">Featured Projects</h1>
+        <p style="font-size: 1.1rem; color: #555; max-width: 600px; margin: 0 auto;">
+          A selection of my best and most complete works, combining hardware, software and machine learning.
+        </p>
+      </div>
+
+      <div class="projects-showcase-grid">
+        <!-- Featured Project 1 -->
+        <div class="showcase-card">
+          <div class="showcase-img">
+            <img src="/assets/img/projects/derek_ai.png" alt="DeReK AI Interface Demo">
+          </div>
+          <div class="showcase-content">
+            <h3>DeReK - AI Voice Agent</h3>
+            <div class="tech-pills">
+              <span>Python</span>
+              <span>OpenAI API</span>
+              <span>Vosk</span>
+              <span>ElevenLabs</span>
+            </div>
+            <p>An AI voice agent that automates data and emotion detection during insurance calls. Built in 32h at Lisbon AI Week. It actively listens to customer requests, extracts structured data, and evaluates the emotional state of the caller to provide actionable insights.</p>
+            <div class="project-actions">
+              <a href="https://github.com/mivige/DeReK" target="_blank" class="cta-button small-btn">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Project 2 -->
+        <div class="showcase-card rev">
+          <div class="showcase-img">
+            <img src="/assets/img/projects/plantinocare.png" alt="PlantinoCare Dashboard Demo">
+          </div>
+          <div class="showcase-content">
+            <h3>PlantinoCare</h3>
+            <div class="tech-pills">
+              <span>Arduino</span>
+              <span>Python</span>
+              <span>MySQL</span>
+              <span>Web App</span>
+            </div>
+            <p>A complete plant-management IoT system built for Arduino Day 2023. Hardware sensors feed data into a Python middleware, stored in MySQL, and visualised via a responsive web app that includes real-time graphs and automated watering/light control features.</p>
+            <div class="project-actions">
+              <a href="https://github.com/mivige/PlantinoCare" target="_blank" class="cta-button small-btn">View on GitHub</a>
+              <!--<a href="#" class="cta-button small-btn outline">Live Demo</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other GitHub Projects -->
+    <section id="other-projects" data-aos="fade-up">
+      <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2.2rem; color: #111827;">More Open Source Work</h2>
+      </div>
+
+      <div class="projects-grid extra">
+        
+        <div class="project-card">
+          <h3>FileOrganizer</h3>
+          <div class="tech-pills">
+            <span>Python</span>
+            <span>Automation</span>
+          </div>
+          <p>A Python script that helps you organise files in a specified directory based on criteria such as file type, date or file size.</p>
+          <div class="project-actions">
+            <a href="https://github.com/mivige/FileOrganizer" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>IntegrityMonitor</h3>
+          <div class="tech-pills">
+            <span>PowerShell</span>
+            <span>Security</span>
+          </div>
+          <p>A PowerShell-based file-integrity monitor. Monitors a folder for changes (added, deleted or modified files) and triggers alerts accordingly.</p>
+          <div class="project-actions">
+            <a href="https://github.com/mivige/IntegrityMonitor" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>TotCloudApp</h3>
+          <div class="tech-pills">
+            <span>PHP</span>
+            <span>Cloud</span>
+          </div>
+          <p>A PHP application that enables generation, configuration and deployment of PaaS/SaaS components. Aimed at simplifying how end-users can set up services.</p>
+          <div class="project-actions">
+            <a href="https://github.com/mivige/TotCloudApp" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>JPokeBattle</h3>
+          <div class="tech-pills">
+            <span>Java</span>
+            <span>Game Dev</span>
+          </div>
+          <p>A Java game clone of Pokémon battle mechanics. Custom graphics and a battle system implemented entirely in Java without external game engines.</p>
+          <div class="project-actions">
+            <a href="https://github.com/mivige/JPokeBattle" target="_blank">View on GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "1e469c717a004f1fa8ff47b44364a917"}'></script>
+</body>
+</html>
