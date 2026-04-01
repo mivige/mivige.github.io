@@ -2,11 +2,150 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/404.html">
-  <script>window.location.replace("/404.html");</script>
-  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michele Gentile (MiViGe) - About Me">
+  <title>About Me | MiViGe</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/about.css">
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <p>Redirecting to <a href="/404.html">Work in progress page</a>...</p>
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div id="header-placeholder"></div>
+
+  <main style="padding-top: 100px; padding-bottom: 80px; overflow-x: hidden;">
+    
+    <!-- Hero Banner Section -->
+    <section class="about-section" data-aos="fade-up" style="max-width: 1200px;">
+      <div class="about-hero">
+        <img src="assets/img/banner.jpg" alt="Michele Gentile at the PC" class="about-hero-img">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+          <h1>My Story</h1>
+          <p>Discover my professional and personal side.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Section -->
+    <section class="about-section" data-aos="fade-up">
+      <h2 class="about-section-title">Professional Journey</h2>
+      
+      <div class="profile-story-container">
+        <div class="profile-story-img-wrapper" data-aos="fade-right" data-aos-delay="100">
+          <img src="assets/img/profile.jpg" alt="Michele Gentile Profile Picture" class="profile-story-img">
+        </div>
+        
+        <div class="profile-story-text" data-aos="fade-left" data-aos-delay="200">
+          <h3>The Early Days & High School</h3>
+          <p>My journey with computer science started early, by the time I was at High School "G. Marconi" in Latina I was already deeply into coding and algorithms. I graduated with a 100/100 cum laude, competed in the Italian CS Olympics (ranking in the top 2.49%), presented PlantinoCare at the European Maker Faire and even served as a C++ instructor to help prepare other students for competitive problem-solving.</p>
+          
+          <h3>University & Global Perspective</h3>
+          <p>I moved on to Sapienza University of Rome for my B.Sc. in Computer Science, maintaining a strong GPA while serving as a Student Representative across multiple committees, representing 10.000+ peers. Seeking a broader perspective, I enriched my academic path through Erasmus+ experiences at the Universitat de les Illes Balears (Spain) and Universidade NOVA de Lisboa (Portugal), tackling everything from Machine Learning to Network Communications.</p>
+
+          <h3>Bridging Hardware, Software, & Teams</h3>
+          <p>Professionally, I love getting my hands dirty with both hardware and code. In Sapienza Fast Charge Racing Team I worked as a Software Engineer developing firmware for autonomous vehicles using Simulink and C++. Not long after, I became Head of Marketing & Design for the Sapienza Gladiators Racing Team <i>(not really in line with my technical background, I know ahah)</i>, securing over €60k in sponsorships and growing our online presence organically.</p>
+
+          <p>On the side, I developed IT Support tools for the Ministry of Justice, brought communities together with Exo Italia, managed speakers for TEDxLatina and much more. What truly drives me is collaborating with brilliant people to make an impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal & Hobbies Section -->
+    <section class="about-section" data-aos="fade-up" style="margin-top: 6rem;">
+      <h2 class="about-section-title">Off the Keyboard</h2>
+      
+      <p class="hobbies-intro">
+        Since I spend a lot of my time working on complex tech problems, I really value getting outside whenever I can. I love exploring new places, whether that's running a long distance, hiking a tough trail, or going for a ride on my motorcycle. My main passions outside of work are <strong>travelling, motorcycling, running, and trekking</strong>. It's simply the best way for me to disconnect and clear my head. Here are a couple of recent milestones I'm particularly proud of.
+      </p>
+
+      <div class="strava-grid">
+        
+        <!-- Running Card -->
+        <article class="strava-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="strava-img-container">
+            <img src="assets/img/running.jpg" alt="Running the Half Marathon" class="strava-img">
+            <span class="strava-type-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.6 20.2c-.3-.2-.5-.4-.7-.7-2-2.3-2-2.3-3.6-4.6l-5-7c-.5-.6-1-1.3-1.6-1.7-.8-.7-1.8-.7-2.6 0-.8.7-.8 1.8 0 2.6l6 6 2 2M15 15l2 2 3.6-3.6c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0L15 15z"></path><circle cx="16" cy="4" r="2"></circle></svg>
+              Run
+            </span>
+          </div>
+          <div class="strava-content">
+            <h3 class="strava-title">Lisbon Half Marathon</h3>
+            <div class="strava-date">Lisbon, Portugal • 2025</div>
+            
+            <div class="strava-stats">
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">21.1</span>
+                <span class="strava-stat-label">Distance (km)</span>
+              </div>
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">6:11</span>
+                <span class="strava-stat-label">Avg Pace (min/km)</span>
+              </div>
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">2h 10m 35s</span>
+                <span class="strava-stat-label">Official End Time</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trekking Card -->
+        <article class="strava-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="strava-img-container">
+            <img src="assets/img/trekking.jpg" alt="Trekking the Fishermen's Trail" class="strava-img">
+            <span class="strava-type-badge" style="background: #2E8B57;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M9.5 8h5M12 14v-2M12 8c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z"></path></svg>
+              Trekking
+            </span>
+          </div>
+          <div class="strava-content">
+            <h3 class="strava-title">Fishermen's Trail (4 Days)</h3>
+            <div class="strava-date">Alentejo Coast, Portugal • 2025</div>
+            
+            <div class="strava-stats">
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">76.03</span>
+                <span class="strava-stat-label">Distance (km)</span>
+              </div>
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">102k</span>
+                <span class="strava-stat-label">Steps</span>
+              </div>
+              <div class="strava-stat-item">
+                <span class="strava-stat-value">75h 21m</span>
+                <span class="strava-stat-label">Total Time</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1e469c717a004f1fa8ff47b44364a917"}'></script>
 </body>
 </html>
