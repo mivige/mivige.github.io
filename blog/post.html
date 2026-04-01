@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post | MiViGe</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+</head>
+<body>
+  <div class="background-animation">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div id="header-placeholder"></div>
+
+  <main style="padding-top: 120px; min-height: 80vh;">
+    
+    <article class="post-container" id="post-container">
+      <a href="index.html" class="cta-button outline small-btn" style="margin-bottom: 2rem;">← Back to Blog</a>
+      <p id="loading-msg">Loading post...</p>
+      <!-- JS injects the content here -->
+    </article>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Marked Parser via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id');
+      const container = document.getElementById('post-container');
+      const loading = document.getElementById('loading-msg');
+
+      if (!postId) {
+        loading.innerHTML = 'Post not found. <a href="index.html">Return to blog</a>.';
+        return;
+      }
+
+      // Fetch metadata from posts.json to get banner, date, title details
+      fetch('posts.json')
+        .then(response => response.json())
+        .then(posts => {
+          const metadata = posts.find(p => p.id === postId);
+          if (!metadata) {
+            throw new Error("Metadata not found for post ID: " + postId);
+          }
+          
+          // Now fetch the actual markdown content
+          fetch(`posts/${postId}.md`)
+            .then(res => {
+              if(!res.ok) throw new Error("Could not find Markdown file.");
+              return res.text();
+            })
+            .then(markdown => {
+              // Convert date
+              const postDate = new Date(metadata.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+              const tagsArray = metadata.tags || [];
+              const tagsHTML = tagsArray.map(tag => `<span class="blog-tag-pill">${tag}</span>`).join('');
+
+              // Construct header block
+              let bannerHTML = '';
+              if (metadata.banner) {
+                bannerHTML = `<div class="post-banner-wrapper"><img src="${metadata.banner}" alt="Banner" class="post-banner-image"></div>`;
+              }
+
+              // Parse Markdown
+              const htmlContent = marked.parse(markdown);
+
+              const innerStructure = `
+                <a href="index.html" class="cta-button outline small-btn" style="margin-bottom: 2rem;">← Back to Blog</a>
+                <header class="post-header">
+                  <h1>${metadata.title}</h1>
+                  <div class="blog-card-meta" style="margin-top: 1rem;">
+                     <span class="blog-date-pill">${postDate}</span>
+                     ${tagsHTML}
+                  </div>
+                </header>
+                ${bannerHTML}
+                <div class="post-content">
+                  ${htmlContent}
+                </div>
+              `;
+              
+              document.title = `${metadata.title} | MiViGe`;
+              
+              container.innerHTML = innerStructure;
+            })
+            .catch(err => {
+              console.error(err);
+              loading.innerHTML = 'Sorry, there was an error loading the markdown file.';
+            });
+        })
+        .catch(err => {
+          console.error(err);
+          loading.innerHTML = 'Sorry, the post metadata could not be found.';
+        });
+    });
+  </script>
+</body>
+</html>

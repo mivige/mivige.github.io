@@ -1,0 +1,10 @@
+[
+  {
+    "id": "first-post",
+    "title": "Hello World!",
+    "date": "2026-04-01",
+    "summary": "I decided it was finally time to add a blog to my portfolio. Here I'll be sharing updates, technical writeups, more about my projects and honestly everything I could think of sharing.",
+    "tags": ["Hello World!"],
+    "banner": ""
+  }
+]
