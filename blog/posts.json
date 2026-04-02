@@ -6,5 +6,13 @@
     "summary": "I decided it was finally time to add a blog to my portfolio. Here I'll be sharing updates, technical writeups, more about my projects and honestly everything I could think of sharing.",
     "tags": ["Hello World!"],
     "banner": ""
+  },
+  {
+    "id": "artemis-2",
+    "title": "Artemis 2: History in the Age of Brain Rot",
+    "date": "2026-04-02",
+    "summary": "We are more connected than ever, yet we seem more detached from the milestones that actually define us as a species.",
+    "tags": ["Thoughts"],
+    "banner": ""
   }
 ]
