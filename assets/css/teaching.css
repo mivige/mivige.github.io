@@ -1,0 +1,161 @@
+/* Teaching Section Styles */
+.teaching-section {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  padding: 0 20px;
+}
+.teaching-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+.teaching-card h3 {
+  color: var(--primary, #0ea5a4);
+  margin-top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.5rem;
+}
+.teaching-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.teaching-card li {
+  margin-bottom: 0.8rem;
+}
+.teaching-card a {
+  color: var(--primary, #0ea5a4);
+  text-decoration: none;
+  font-weight: 600;
+}
+.teaching-card a:hover {
+  text-decoration: underline;
+}
+
+/* News Section */
+.news-item {
+  padding: 1rem 1.2rem;
+  background: rgba(14, 165, 164, 0.05);
+  border-left: 4px solid var(--primary, #0ea5a4);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.news-item:last-child {
+  margin-bottom: 0;
+}
+.news-date {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.news-content {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* FAQ and Guides Section */
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+.faq-question {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.faq-answer {
+  color: #555;
+}
+.guide-step {
+  margin-bottom: 1rem;
+}
+.btn-resource {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary, #0ea5a4);
+  color: white !important;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  font-weight: normal !important;
+  transition: background 0.3s;
+}
+.btn-resource:hover {
+  background: var(--primary-600, #0b948f);
+}
+
+/* Styles for the new lessons list */
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.lesson-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #fbfdff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.lesson-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.lesson-date {
+  color: #222;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.lesson-date span {
+  display: block;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-top: 0.2rem;
+}
+.lesson-topics {
+  color: #444;
+  font-size: 0.95rem;
+}
+.lesson-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.lesson-links a {
+  font-size: 0.85rem;
+  background: rgba(14, 165, 164, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.lesson-links a:hover {
+  background: rgba(14, 165, 164, 0.2);
+  text-decoration: none;
+}
+.extra-resources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .teaching-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lesson-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
