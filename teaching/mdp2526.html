@@ -238,17 +238,17 @@
 
         <div class="faq-item">
           <div class="faq-question">D: In che modo HashSet e TreeSet gestiscono l'identificazione dei duplicati?</div>
-          <div class="faq-answer">R: La differenza è fondamentale: HashSet si affida al contratto tra equals() e hashCode(), mentre TreeSet ignora questi metodi e utilizza esclusivamente compareTo() (o un Comparator). Se compareTo() non è implementato con estrema attenzione per riflettere l'uguaglianza, il TreeSet potrebbe accettare elementi che logicamente considereremmo duplicati o, viceversa, scartare elementi distinti se il metodo restituisce erroneamente 0.</div>
+          <div class="faq-answer">R: La differenza è fondamentale: HashSet si affida al contratto tra <code>equals()</code> e <code>hashCode()</code>, mentre TreeSet ignora questi metodi e utilizza esclusivamente <code>compareTo()</code> (o un Comparator). Se <code>compareTo()</code> non è implementato con estrema attenzione per riflettere l'uguaglianza, il TreeSet potrebbe accettare elementi che logicamente considereremmo duplicati o, viceversa, scartare elementi distinti se il metodo restituisce erroneamente 0.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">D: Cos'è esattamente un Supplier&lt;T&gt; e quando si usa?</div>
-          <div class="faq-answer">R: Un Supplier è una funzione che non riceve input ma restituisce un oggetto di tipo T. Può essere visto come un "generatore" o una fabbrica (simile ai generatori in Python): lo si usa quando è necessario produrre o fornire un valore "on demand" tramite il metodo get(), come nel caso di un generatore di ID o di timestamp.</div>
+          <div class="faq-answer">R: Un Supplier è una funzione che non riceve input ma restituisce un oggetto di tipo T. Può essere visto come un "generatore" o una fabbrica (simile ai generatori in Python): lo si usa quando è necessario produrre o fornire un valore "on demand" tramite il metodo <code>get()</code>, come nel caso di un generatore di ID o di timestamp.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">D: Come si garantisce la coerenza tra l'ordinamento e l'uguaglianza in un TreeSet?</div>
-          <div class="faq-answer">R: Per evitare comportamenti inattesi, è necessario che compareTo() sia coerente con equals(): il metodo dovrebbe restituire 0 se e solo se equals() restituisce true. Se si vuole un ordinamento basato su criteri specifici (es. consumo energetico invece del nome in un dispositivo smart), bisogna gestire esplicitamente i criteri di spareggio nel compareTo per non perdere dati involontariamente.</div>
+          <div class="faq-answer">R: Per evitare comportamenti inattesi, è necessario che <code>compareTo()</code> sia coerente con <code>equals()</code>: il metodo dovrebbe restituire 0 se e solo se <code>equals()</code> restituisce true. Se si vuole un ordinamento basato su criteri specifici (es. consumo energetico invece del nome in un dispositivo smart), bisogna gestire esplicitamente i criteri di spareggio nel <code>compareTo()</code> per non perdere dati involontariamente.</div>
         </div>
       </div>
 
