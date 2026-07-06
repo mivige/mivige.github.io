@@ -4,7 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curriculum Vitae of Michele Vincenzo Gentile: B.Sc. Computer Science at Sapienza University of Rome, Erasmus+ experiences, teaching, racing teams and software engineering roles.">
   <title>Curriculum Vitae | MiViGe</title>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Curriculum Vitae | MiViGe">
+  <meta property="og:description" content="B.Sc. Computer Science at Sapienza University of Rome, Erasmus+ experiences, teaching, racing teams and software engineering roles.">
+  <meta property="og:url" content="https://mivige.github.io/cv.html">
+  <meta property="og:image" content="https://mivige.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Curriculum Vitae | MiViGe">
+  <meta name="twitter:description" content="B.Sc. Computer Science at Sapienza University of Rome, Erasmus+ experiences, teaching, racing teams and software engineering roles.">
+  <meta name="twitter:image" content="https://mivige.github.io/assets/img/profile.jpg">
+
+  <script>
+    // Apply the saved (or system) theme before CSS loads to avoid a flash
+    (function () {
+      var theme = localStorage.getItem('theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -21,6 +43,16 @@
   </div>
 
   <div id="header-placeholder"></div>
+  <noscript>
+    <nav style="text-align: center; padding: 1.5rem 1rem 0;">
+      <a href="/index.html">Home</a> &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="/project.html">Projects</a> &middot;
+      <a href="/cv.html">CV</a> &middot;
+      <a href="/blog/index.html">Blog</a> &middot;
+      <a href="/contact.html">Contacts</a>
+    </nav>
+  </noscript>
 
   <main style="padding-top: 100px; padding-bottom: 80px; overflow-x: hidden;">
     <!-- Headings & Download Actions -->
@@ -29,14 +61,13 @@
       <h1
         style="color: var(--primary); margin-bottom: 0.5rem; font-size: 2.8rem; text-shadow: 0 0 10px rgba(14, 165, 164, 0.2);">
         Michele Vincenzo Gentile</h1>
-      <h2 style="color: #666; font-size: 1.5rem; font-weight: 400; margin-top: 0;">Curriculum Vitae</h2>
+      <h2 style="color: var(--muted); font-size: 1.5rem; font-weight: 400; margin-top: 0;">Curriculum Vitae</h2>
 
       <div class="cta-container"
         style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
         <a href="/assets/docs/Gentile_MicheleVincenzo_CurriculumVitae.pdf" target="_blank" class="cta-button">View
           Curriculum Vitae (PDF)</a>
-        <a href="/assets/docs/Gentile_MicheleVincenzo_Resume.pdf" target="_blank" class="cta-button"
-          style="background: rgba(255,255,255,0.8); color: var(--primary);">View Resume (PDF)</a>
+        <a href="/assets/docs/Gentile_MicheleVincenzo_Resume.pdf" target="_blank" class="cta-button alt">View Resume (PDF)</a>
       </div>
     </section>
 
@@ -51,7 +82,7 @@
             <span class="timeline-date">Sep 2023 - Present</span>
             <h3>B.Sc. in Computer Science</h3>
             <h4>Sapienza University of Rome (Rome, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li><strong>Cumulative GPA:</strong> 3.87/4.0</li>
               <li><strong>Student Representative:</strong> Teaching Area Council Student Representative, Faculty Student
                 Representative, Quality Assurance Committee Student Representative</li>
@@ -68,7 +99,7 @@
             <span class="timeline-date">Sep 2025 - Feb 2026</span>
             <h3>ERASMUS+ Information Management</h3>
             <h4>Universidade NOVA de Lisboa, IMS (Lisbon, Portugal)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li><strong>Cumulative GPA:</strong> 4.0/4.0</li>
               <li><strong>Coursework:</strong> Machine Learning I, Systems Analysis, Data Science, Ethical and Legal
                 Aspects of AI, Business Strategy and Digital Transformation.</li>
@@ -81,7 +112,7 @@
             <span class="timeline-date">Sep 2024 - Feb 2025</span>
             <h3>ERASMUS+ Engineering in Computer Science</h3>
             <h4>Universitat de les Illes Balears (Palma de Mallorca, Spain)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li><strong>Coursework (in Spanish/Catalan):</strong> Databases II, Database Management Systems,
                 Statistics, Communication and Networks, Computer Networks.</li>
             </ul>
@@ -93,7 +124,7 @@
             <span class="timeline-date">Sep 2018 - Jun 2023</span>
             <h3>High School Diploma in Computer Science</h3>
             <h4>IIS "G. Marconi" (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li><strong>Final evaluation:</strong> 100/100 with Laude (Cumulative GPA 4.0/4.0)</li>
               <li><strong>Student Representative:</strong> Elected school student representative during final year.</li>
             </ul>
@@ -115,7 +146,7 @@
             <span class="timeline-date">Apr 2024 - Present</span>
             <h3>Head of Marketing & Design</h3>
             <h4>Sapienza Gladiators Racing Team (Rome, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Led a team of 8 people to define and execute brand strategy, sponsor communications, event collateral
                 and digital presence.</li>
               <li>Owned end-to-end marketing work: brand identity, sponsor decks, social media and event promotion.</li>
@@ -130,7 +161,7 @@
             <span class="timeline-date">Mar 2026 - Present</span>
             <h3>Teaching Assistant</h3>
             <h4>Sapienza University of Rome (Rome, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Serving as Teaching Assistant for Methodologies of Programming (Java, design patterns), supporting two parallel channels (A‑L and M‑Z) with a combined enrollment of over 400 students.</li>
               <li>Independently planned and delivered exercise‑focused lectures for 2 months, managing the full classroom experience autonomously.</li>
               <li>Assisted faculty during exam sessions, providing support and student guidance.</li>
@@ -143,7 +174,7 @@
             <span class="timeline-date">Dec 2023 - Nov 2024</span>
             <h3>Software Engineer</h3>
             <h4>Sapienza Fast Charge Racing Team (Cisterna di Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Developed firmware for autonomous vehicle control using model-based design techniques with
                 <strong>Simulink</strong> and <strong>Speedgoat</strong>, reducing latency by 75% (to under 0.5
                 seconds).
@@ -161,7 +192,7 @@
             <span class="timeline-date">Dec 2023 - Sep 2024</span>
             <h3>IT Support</h3>
             <h4>Ministry of Justice | Gen. Directorate for External Penal Execution (Rome, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Supported the organization of documents focusing on educational and social inclusion projects for
                 ex-inmates.</li>
               <li>Developed a questionnaire to assess Inclusion Allowance request processes, improving application
@@ -176,7 +207,7 @@
             <span class="timeline-date">Feb 2023 - Mar 2023</span>
             <h3>C++ Instructor</h3>
             <h4>IIS "G. Marconi" (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Designed and delivered an intensive preparatory course for the Italian CS Olympics.</li>
               <li>Mentored students in <strong>C++</strong> programming, algorithms, and competitive problem-solving.
               </li>
@@ -199,7 +230,7 @@
             <span class="timeline-date">Apr 2026 - Present</span>
             <h3>Board of Directors, Treasurer</h3>
             <h4>Exo Latina (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Elected to the Board of Directors, taking on the role of Treasurer with responsibility for financial oversight and budget management.
               </li>
             </ul>
@@ -211,7 +242,7 @@
             <span class="timeline-date">Oct 2025 - Present</span>
             <h3>Speaker Curator</h3>
             <h4>TEDxLatina (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Involved across the full speaker journey, from scouting and outreach to the final selection process.
               </li>
               <li>Acted as primary owner for two selected speakers, supporting their speech development and rehearsals.
@@ -225,7 +256,7 @@
             <span class="timeline-date">Apr 2025 - Dec 2025</span>
             <h3>University-Funded Project Delegate (LaTeXLab)</h3>
             <h4>Sapienza University of Rome (Rome, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Managed budget allocation and reporting to promote LaTeX for academic writing among students.</li>
               <li>Co-authored a comprehensive curriculum of educational materials published online.</li>
             </ul>
@@ -237,7 +268,7 @@
             <span class="timeline-date">Jun 2023 - Present</span>
             <h3>National Community Coordinator</h3>
             <h4>Exo Italia (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Developed community guidelines to promote collaboration among young entrepreneurs.</li>
               <li>Mentored local community leaders to drive growth and engagement.</li>
             </ul>
@@ -249,7 +280,7 @@
             <span class="timeline-date">Sep 2022 - Jun 2023</span>
             <h3>Community Development Volunteer</h3>
             <h4>Exo Latina (Latina, Italy)</h4>
-            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: #444; line-height: 1.6;">
+            <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text); line-height: 1.6;">
               <li>Coordinated programs offering resources and mentorship for young entrepreneurs to address youth
                 migration in the province.</li>
               <li>Organized hackathons uniting local youth to collaboratively devise solutions for regional businesses.
@@ -306,28 +337,28 @@
 
         <!-- Honors & Awards -->
         <div
-          style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          style="background: var(--card-bg); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
           <h3 style="margin-top: 0; color: var(--primary-600);">Honors & Awards</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: #444;">
-            <li><strong style="color: #222;">2023</strong> &bull; Exhibitor, Maker Faire Rome (European Edition)</li>
-            <li><strong style="color: #222;">2023</strong> &bull; 1st Place, BeMind's Hackathon (Product Design &
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: var(--text);">
+            <li><strong style="color: var(--text-strong);">2023</strong> &bull; Exhibitor, Maker Faire Rome (European Edition)</li>
+            <li><strong style="color: var(--text-strong);">2023</strong> &bull; 1st Place, BeMind's Hackathon (Product Design &
               Fintech)</li>
-            <li><strong style="color: #222;">2023</strong> &bull; 1st Place, Hygenia's Hackathon (IoT & Modular
+            <li><strong style="color: var(--text-strong);">2023</strong> &bull; 1st Place, Hygenia's Hackathon (IoT & Modular
               Hardware)</li>
-            <li><strong style="color: #222;">2022</strong> &bull; Top 2.49% (243rd), Italian CS Olympics</li>
+            <li><strong style="color: var(--text-strong);">2022</strong> &bull; Top 2.49% (243rd), Italian CS Olympics</li>
           </ul>
         </div>
 
         <!-- Committees -->
         <div
-          style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          style="background: var(--card-bg); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
           <h3 style="margin-top: 0; color: var(--primary-600);">Committees</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: #444;">
-            <li><strong style="color: #222;">2024-26</strong> &bull; Student Rep, Assembly of the Faculty of Information
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: var(--text);">
+            <li><strong style="color: var(--text-strong);">2024-26</strong> &bull; Student Rep, Assembly of the Faculty of Information
               Engineering, Informatics and Statistics</li>
-            <li><strong style="color: #222;">2024-25</strong> &bull; Student Rep, Quality Assurance Management Committee
+            <li><strong style="color: var(--text-strong);">2024-25</strong> &bull; Student Rep, Quality Assurance Management Committee
             </li>
-            <li><strong style="color: #222;">2023-25</strong> &bull; Student Rep, CS Teaching Area Council</li>
+            <li><strong style="color: var(--text-strong);">2023-25</strong> &bull; Student Rep, CS Teaching Area Council</li>
           </ul>
         </div>
 
@@ -335,21 +366,20 @@
 
       <!-- Certificates spanning full width beneath the grid -->
       <div
-        style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 1.5rem;">
+        style="background: var(--card-bg); backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 1.5rem;">
         <h3 style="margin-top: 0; color: var(--primary-600);">Selected Certificates</h3>
         <ul
-          style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: #444; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-          <li><strong style="color: #222;">2025</strong> &bull; TOEFL iBT (Score: 95/120)</li>
-          <li><strong style="color: #222;">2024</strong> &bull; Databases: Relational Databases and SQL (Stanford)</li>
-          <li><strong style="color: #222;">2024</strong> &bull; IT Security and Risk Management (ENISA)</li>
-          <li><strong style="color: #222;">2023</strong> &bull; Cisco Certified Network Associate (CCNA1)</li>
+          style="list-style: none; padding: 0; margin: 0; line-height: 1.8; color: var(--text); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+          <li><strong style="color: var(--text-strong);">2025</strong> &bull; TOEFL iBT (Score: 95/120)</li>
+          <li><strong style="color: var(--text-strong);">2024</strong> &bull; Databases: Relational Databases and SQL (Stanford)</li>
+          <li><strong style="color: var(--text-strong);">2024</strong> &bull; IT Security and Risk Management (ENISA)</li>
+          <li><strong style="color: var(--text-strong);">2023</strong> &bull; Cisco Certified Network Associate (CCNA1)</li>
         </ul>
       </div>
     </section>
 
     <div style="text-align: center; margin-top: 5rem; padding-bottom: 2rem;">
-      <a href="https://www.linkedin.com/in/mivige" target="_blank" class="cta-button"
-        style="background: rgba(255,255,255,0.8); color: var(--primary);">More on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mivige" target="_blank" class="cta-button alt">More on LinkedIn</a>
     </div>
 
   </main>
