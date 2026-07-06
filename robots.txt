@@ -6,7 +6,6 @@ Sitemap: https://mivige.github.io/sitemap.xml
 
 # Allow all crawlers to access the main content
 Allow: /index.html
-Allow: /css/
 Allow: /assets/
 
 # Disallow crawling of any potential system files (if they exist)

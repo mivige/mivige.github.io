@@ -4,10 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Michele Gentile (MiViGe) - Projects and Portfolio">
+  <meta name="description" content="Projects by Michele Gentile (MiViGe): DeReK AI voice agent, PlantinoCare IoT system, the Sapienza Gladiators website and more open source work.">
   <title>Projects | MiViGe</title>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | MiViGe">
+  <meta property="og:description" content="DeReK AI voice agent, PlantinoCare IoT system, the Sapienza Gladiators website and more open source work.">
+  <meta property="og:url" content="https://mivige.github.io/project.html">
+  <meta property="og:image" content="https://mivige.github.io/assets/img/projects/derek_ai.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projects | MiViGe">
+  <meta name="twitter:description" content="DeReK AI voice agent, PlantinoCare IoT system, the Sapienza Gladiators website and more open source work.">
+  <meta name="twitter:image" content="https://mivige.github.io/assets/img/projects/derek_ai.webp">
+
+  <script>
+    // Apply the saved (or system) theme before CSS loads to avoid a flash
+    (function () {
+      var theme = localStorage.getItem('theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
-  
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -24,6 +45,16 @@
   </div>
 
   <div id="header-placeholder"></div>
+  <noscript>
+    <nav style="text-align: center; padding: 1.5rem 1rem 0;">
+      <a href="/index.html">Home</a> &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="/project.html">Projects</a> &middot;
+      <a href="/cv.html">CV</a> &middot;
+      <a href="/blog/index.html">Blog</a> &middot;
+      <a href="/contact.html">Contacts</a>
+    </nav>
+  </noscript>
 
   <!-- Main Content -->
   <main style="padding-top: 120px; min-height: 80vh;">
@@ -31,7 +62,7 @@
     <section id="featured-projects" data-aos="fade-up" style="padding-top: 0;">
       <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
         <h1 style="font-size: 3rem; color: var(--primary);">Featured Projects</h1>
-        <p style="font-size: 1.1rem; color: #555; max-width: 600px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; color: var(--text-soft); max-width: 600px; margin: 0 auto;">
           A selection of my best and most complete works, combining hardware, software and machine learning.
         </p>
       </div>
@@ -40,7 +71,7 @@
         <!-- Featured Project 1 -->
         <div class="showcase-card">
           <div class="showcase-img">
-            <img src="/assets/img/projects/derek_ai.png" alt="DeReK AI Interface Demo">
+            <img src="/assets/img/projects/derek_ai.webp" alt="DeReK AI Interface Demo">
           </div>
           <div class="showcase-content">
             <h3>DeReK - AI Voice Agent</h3>
@@ -60,7 +91,7 @@
         <!-- Featured Project 2 -->
         <div class="showcase-card rev">
           <div class="showcase-img">
-            <img src="/assets/img/projects/plantinocare.png" alt="PlantinoCare Dashboard Demo">
+            <img src="/assets/img/projects/plantinocare.webp" alt="PlantinoCare Dashboard Demo" loading="lazy">
           </div>
           <div class="showcase-content">
             <h3>PlantinoCare</h3>
@@ -77,13 +108,32 @@
             </div>
           </div>
         </div>
+
+        <!-- Featured Project 3 
+        <div class="showcase-card">
+          <div class="showcase-img" style="display: flex; align-items: center; justify-content: center; padding: 1.5rem;">
+            <img src="/assets/img/gladiators_logo.svg" alt="Sapienza Gladiators Racing Team logo" loading="lazy" style="object-fit: contain;">
+          </div>
+          <div class="showcase-content">
+            <h3>Sapienza Gladiators Website</h3>
+            <div class="tech-pills">
+              <span>Next.js</span>
+              <span>React.js</span>
+              <span>Google Lighthouse</span>
+            </div>
+            <p>Revamp of the Sapienza Gladiators Racing Team website: race results, prototypes, team presentations and photo galleries, built closely with the team leadership to present the team's brand identity. Kept up-to-date with the latest Next.js versions and optimized using Google Lighthouse to address performance bottlenecks.</p>
+            <div class="project-actions">
+              <a href="https://sapienzagladiators.it/" target="_blank" class="cta-button small-btn">Visit the Website</a>
+            </div>
+          </div>
+        </div>-->
       </div>
     </section>
 
     <!-- Other GitHub Projects -->
     <section id="other-projects" data-aos="fade-right">
       <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
-        <h2 style="font-size: 2.2rem; color: #111827;">More Open Source Work</h2>
+        <h2 style="font-size: 2.2rem; color: var(--text-strong);">More Open Source Work</h2>
       </div>
 
       <div class="projects-grid extra">
