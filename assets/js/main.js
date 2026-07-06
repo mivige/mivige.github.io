@@ -16,6 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 headerPlaceholder.innerHTML = data;
             }
 
+            // Wire the dark mode toggle once the header is loaded.
+            // The initial theme is applied by the inline script in each page's <head>
+            // (before CSS loads) to avoid a flash of the wrong theme.
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    localStorage.setItem('theme', next);
+                });
+            }
+
+            // Follow OS theme changes as long as the user hasn't picked one manually
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                }
+            });
+
             // Initialize mobile menu outline toggle functionality once header is loaded
             const mobileMenu = document.getElementById('mobile-menu');
             const navMenu = document.getElementById('nav-menu');
@@ -44,6 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const footerPlaceholder = document.getElementById('footer-placeholder');
             if (footerPlaceholder) {
                 footerPlaceholder.innerHTML = data;
+            }
+
+            // Keep the copyright year current
+            const footerYear = document.getElementById('footer-year');
+            if (footerYear) {
+                footerYear.textContent = new Date().getFullYear();
             }
         })
         .catch(err => console.error('Failed to load footer:', err));
