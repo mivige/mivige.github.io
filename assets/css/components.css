@@ -6,10 +6,10 @@
 }
 
 .project-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--divider);
   border-radius: 8px;
   padding: 1rem;
-  background: #fff;
+  background: var(--surface-solid);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: background 0.3s, border-color 0.3s;
 }
@@ -19,7 +19,7 @@
 }
 
 .project-card a {
-  color: #007bff;
+  color: var(--link-blue);
 }
 
 /* Portfolio */
@@ -36,8 +36,8 @@
 .portfolio-card {
   display: flex;
   flex-wrap: wrap;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--surface-solid);
+  border: 1px solid var(--divider);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -64,15 +64,15 @@
 }
 
 .portfolio-content a {
-  color: #007bff;
+  color: var(--link-blue);
 }
 
 .project-card,
 .portfolio-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   /* Smooth 'snap' effect */
@@ -87,7 +87,7 @@
   /* Soft teal shadow */
   border-color: var(--primary);
   /* Highlights the border in teal */
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--card-bg-hover);
   /* Becomes slightly less transparent */
 }
 
@@ -135,14 +135,14 @@
   border-radius: 50px;
 
   /* Glass Effect */
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--glass-soft);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--glass-border);
 
   /* Typography & Layout */
   font-weight: 500;
-  color: #374151;
+  color: var(--text);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 
@@ -153,7 +153,7 @@
 }
 
 .tech-badge:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card-bg-hover);
   transform: translateY(-4px) scale(1.05);
   border-color: var(--primary);
   color: var(--primary-600);
@@ -186,16 +186,16 @@
 
 #contact .contact-list li {
   /* 1. GLASS CONTAINER STYLE */
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--card-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
 
   /* 2. SPACING & LAYOUT */
   padding: 1rem 1.5rem;
   font-size: 1.05rem;
-  color: #333;
+  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,7 +245,7 @@
 
 /* Hover Effect for the whole row */
 #contact .contact-list li:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card-bg-hover);
   transform: translateX(10px);
   /* Slides slightly to the right */
   border-color: var(--primary);
@@ -297,6 +297,16 @@
   transform: translateY(-3px);
 }
 
+/* Secondary (light glass) CTA variant */
+.cta-button.alt {
+  background: var(--cta-alt-bg);
+  color: var(--primary);
+}
+
+.cta-button.alt:hover {
+  background: transparent;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
@@ -320,12 +330,12 @@
 
 .timeline-content {
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--glass-soft) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
   /* Smoother corner */
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--glass-border);
   border-left: 4px solid var(--primary);
   /* A clean left accent replaces the external track */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
@@ -358,7 +368,7 @@
   border-left-width: 8px;
   /* Accent bar grows smoothly */
   box-shadow: 0 8px 20px rgba(14, 165, 164, 0.1);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(135deg, var(--card-bg-hover) 0%, var(--card-bg) 100%);
 }
 
 .timeline-content:hover::before {
@@ -389,7 +399,7 @@
   /* Gap buffer so long titles don't touch the date pill */
   font-size: 1.25rem;
   /* Scaled down */
-  color: #111827;
+  color: var(--text-strong);
 }
 
 .timeline-content>*:not(h3):not(.timeline-date) {
@@ -398,7 +408,7 @@
 
 .timeline-content h4 {
   margin: 0 0 0.8rem 0;
-  color: #6b7280;
+  color: var(--muted);
   font-weight: 500;
   font-size: 0.95rem;
   /* Scaled down */
@@ -408,7 +418,7 @@
 .timeline-content ul {
   position: relative;
   z-index: 1;
-  color: #374151;
+  color: var(--text);
   font-size: 0.9rem;
   /* Scaled down text */
   margin-bottom: 0.5rem;
@@ -452,10 +462,10 @@
 .showcase-card {
   display: flex;
   flex-direction: row;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -471,7 +481,7 @@
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15);
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--card-bg-hover);
 }
 
 .showcase-img {
@@ -504,12 +514,12 @@
 .showcase-content h3 {
   margin-top: 0;
   font-size: 1.5rem;
-  color: #111827;
+  color: var(--text-strong);
   margin-bottom: 0.5rem;
 }
 
 .showcase-content p {
-  color: #555;
+  color: var(--text-soft);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -573,7 +583,7 @@
 
 .projects-grid.extra .project-card p {
   flex-grow: 1;
-  color: #555;
+  color: var(--text-soft);
   font-size: 0.95rem;
 }
 
@@ -600,7 +610,7 @@
   .showcase-card, .showcase-card.rev {
     flex-direction: column;
   }
-  
+
   .showcase-img {
     height: 200px;
     flex: none;
@@ -609,4 +619,148 @@
   .projects-grid.extra {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   Homepage Landing Sections
+   ========================================================================== */
+
+/* Hero */
+.hero-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--glass-border);
+  box-shadow: 0 0 25px rgba(14, 165, 164, 0.45);
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(14, 165, 164, 0.7);
+}
+
+.hero-eyebrow {
+  color: var(--primary-600);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+#home h1 {
+  margin-top: 0.25rem;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Highlights (stat tiles) */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(14, 165, 164, 0.15);
+  background: var(--card-bg-hover);
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-600);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* Focus / featured cards grid (3-up on desktop) */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+
+.focus-grid .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.focus-grid .project-card p {
+  flex-grow: 1;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* Grouped skills */
+.skill-group {
+  margin-bottom: 1.75rem;
+}
+
+.skill-group h3 {
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+/* Contact call-to-action band */
+.contact-band {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.contact-band h2 {
+  margin-top: 0;
+}
+
+.contact-band p {
+  color: var(--text-soft);
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
 }

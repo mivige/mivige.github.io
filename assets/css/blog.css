@@ -31,9 +31,9 @@
 }
 
 .blog-card {
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -54,7 +54,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--divider);
 }
 
 .blog-card-content {
@@ -97,12 +97,12 @@
 .blog-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #111827;
+  color: var(--text-strong);
   line-height: 1.3;
 }
 
 .blog-card p {
-  color: #555;
+  color: var(--text-soft);
   font-size: 0.95rem;
   line-height: 1.6;
   flex: 1;
@@ -131,7 +131,7 @@
     height: auto;
     min-height: 100%;
     border-bottom: none;
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid var(--divider);
   }
 
   .blog-card.featured.no-image {
@@ -175,7 +175,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0 5%;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--card-bg);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 3rem;
@@ -185,7 +185,7 @@
 
 .post-header {
   margin-bottom: 2rem;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--divider);
   padding-bottom: 2rem;
 }
 
@@ -224,12 +224,12 @@
 
 .post-content {
   line-height: 1.8;
-  color: #333;
+  color: var(--text);
   font-size: 1.1rem;
 }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4 {
-  color: #111827;
+  color: var(--text-strong);
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -282,7 +282,7 @@
 }
 
 .post-content p code, .post-content li code {
-  background: #f4f4f4;
+  background: var(--code-bg);
   color: #e06c75;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
@@ -294,7 +294,7 @@
   margin: 0 0 1.5rem 0;
   padding: 0.5rem 1rem;
   background: rgba(181, 23, 158, 0.05);
-  color: #555;
+  color: var(--text-soft);
   font-style: italic;
   border-radius: 0 8px 8px 0;
 }
@@ -303,7 +303,7 @@
   display: inline-flex;
   align-items: center;
   margin-bottom: 2rem;
-  color: #555;
+  color: var(--text-soft);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;

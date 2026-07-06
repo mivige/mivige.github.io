@@ -3,6 +3,7 @@ html { scroll-behavior: smooth; }
 
 /* Theme tokens (easy to tweak palette) */
 :root {
+  color-scheme: light;
   --bg-start: #eef6ff;
   --bg-mid: #f7fbff;
   --bg-end: #ffffff;
@@ -11,13 +12,63 @@ html { scroll-behavior: smooth; }
   --muted: #6b7280;
   --nav-bg: rgba(255,255,255,0.72);
   --nav-border: rgba(15, 23, 42, 0.06);
+  /* Text */
+  --text: #333;
+  --text-strong: #111827;
+  --text-soft: #555;
+  --nav-link: rgba(0,0,0,0.75);
+  /* Surfaces (glass cards and solid panels) */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-bg-hover: rgba(255, 255, 255, 0.9);
+  --glass-soft: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --surface-solid: #ffffff;
+  --surface-raised: #fbfdff;
+  --mobile-menu-bg: rgba(255,255,255,0.95);
+  --cta-alt-bg: rgba(255,255,255,0.8);
+  --divider: rgba(0, 0, 0, 0.05);
+  /* Misc */
+  --orb-2: #4facfe;
+  --orb-opacity: 0.6;
+  --link-blue: #007bff;
+  --code-bg: #f4f4f4;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-start: #0b1220;
+  --bg-mid: #0f172a;
+  --bg-end: #111827;
+  --muted: #9ca3af;
+  --nav-bg: rgba(15, 23, 42, 0.72);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  /* Text */
+  --text: #d1d5db;
+  --text-strong: #f3f4f6;
+  --text-soft: #9ca3af;
+  --nav-link: rgba(255,255,255,0.85);
+  /* Surfaces */
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --card-bg-hover: rgba(30, 41, 59, 0.9);
+  --glass-soft: rgba(30, 41, 59, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --surface-solid: #1e293b;
+  --surface-raised: #263449;
+  --mobile-menu-bg: rgba(15, 23, 42, 0.97);
+  --cta-alt-bg: rgba(30, 41, 59, 0.8);
+  --divider: rgba(255, 255, 255, 0.08);
+  /* Misc */
+  --orb-2: #1d4ed8;
+  --orb-opacity: 0.3;
+  --link-blue: #60a5fa;
+  --code-bg: #1f2937;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text);
   background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-mid) 60%, var(--bg-end) 100%);
   background-attachment: fixed;
   background-size: cover;
@@ -38,6 +89,11 @@ body::before {
   mix-blend-mode: overlay;
   opacity: 0.85;
   z-index: -1; /* keep it behind the page content */
+}
+
+/* Tone down the light-spot overlay on the dark background */
+[data-theme="dark"] body::before {
+  opacity: 0.15;
 }
 
 /* Respect users who prefer reduced motion or simpler visuals */

@@ -5,17 +5,17 @@
   padding: 0 20px;
 }
 .teaching-card {
-  background: #ffffff;
+  background: var(--surface-solid, #ffffff);
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--divider, rgba(0, 0, 0, 0.05));
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
 }
 .teaching-card h3 {
   color: var(--primary, #0ea5a4);
   margin-top: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--divider, rgba(0, 0, 0, 0.05));
   padding-bottom: 0.5rem;
 }
 .teaching-card ul {
@@ -47,13 +47,13 @@
 }
 .news-date {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--muted, #666);
   font-weight: bold;
   margin-bottom: 0.3rem;
   display: block;
 }
 .news-content {
-  color: #333;
+  color: var(--text, #333);
   font-size: 0.95rem;
 }
 
@@ -64,10 +64,10 @@
 .faq-question {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: var(--text-strong, #222);
 }
 .faq-answer {
-  color: #555;
+  color: var(--text-soft, #555);
 }
 .guide-step {
   margin-bottom: 1rem;
@@ -101,8 +101,8 @@
   grid-template-columns: 100px 1fr auto;
   gap: 1.5rem;
   padding: 1rem 1.5rem;
-  background: #fbfdff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--surface-raised, #fbfdff);
+  border: 1px solid var(--divider, rgba(0, 0, 0, 0.05));
   border-radius: 8px;
   align-items: center;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -112,19 +112,19 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 .lesson-date {
-  color: #222;
+  color: var(--text-strong, #222);
   font-weight: bold;
   font-size: 0.95rem;
 }
 .lesson-date span {
   display: block;
-  color: #666;
+  color: var(--muted, #666);
   font-size: 0.8rem;
   font-weight: normal;
   margin-top: 0.2rem;
 }
 .lesson-topics {
-  color: #444;
+  color: var(--text, #444);
   font-size: 0.95rem;
 }
 .lesson-links {
@@ -146,7 +146,7 @@
 .extra-resources {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px dashed rgba(0,0,0,0.1);
+  border-top: 1px dashed var(--divider, rgba(0,0,0,0.1));
 }
 
 /* Responsive adjustments */
