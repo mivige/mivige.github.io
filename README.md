@@ -19,6 +19,10 @@ The website is fully responsive and includes:
 - Mobile-first approach with hamburger menu
 - Optimized layouts for all screen sizes
 
+## 🌗 Dark Mode
+
+A theme toggle in the navbar switches between light and dark mode. The choice is persisted in localStorage and defaults to the system `prefers-color-scheme` preference.
+
 ## 📄 License
 
-© 2025 Michele Gentile. All rights reserved.
+© 2026 Michele Gentile. All rights reserved.
