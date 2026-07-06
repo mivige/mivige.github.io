@@ -5,17 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Michele Gentile (MiViGe) - Software Engineer specializing in embedded systems and machine learning. Computer Science student at Sapienza University of Rome with expertise in C++, Python, React.js, and real-time systems.">
+    content="Michele Gentile (MiViGe) - Computer Science student at Sapienza University of Rome and Teaching Assistant, building things in embedded systems and machine learning. Expertise in C++, Python, React.js, and real-time systems.">
   <meta name="keywords"
-    content="Michele Gentile, MiViGe, Software Engineer, Embedded Systems, Machine Learning, Computer Science, Sapienza University, C++, Python, React.js, JavaScript, Real-time Systems">
+    content="Michele Gentile, MiViGe, Software Engineer, Teaching Assistant, Embedded Systems, Machine Learning, Computer Science, Sapienza University, C++, Python, React.js, JavaScript, Real-time Systems">
   <meta name="author" content="Michele Gentile">
   <meta name="google-site-verification" content="86bQBbSvEpQWPVmf86wODGkFGmX292RN2RgVuzgsAZE" />
-  <title>Software Engineer | MiViGe</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/icons/favicon.ico">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <title>Michele Gentile | MiViGe</title>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michele Gentile | MiViGe">
+  <meta property="og:description" content="Computer Science student at Sapienza University of Rome and Teaching Assistant, building things in embedded systems and machine learning.">
+  <meta property="og:url" content="https://mivige.github.io/">
+  <meta property="og:image" content="https://mivige.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michele Gentile | MiViGe">
+  <meta name="twitter:description" content="Computer Science student at Sapienza University of Rome and Teaching Assistant, building things in embedded systems and machine learning.">
+  <meta name="twitter:image" content="https://mivige.github.io/assets/img/profile.jpg">
+
+  <script>
+    // Apply the saved (or system) theme before CSS loads to avoid a flash
+    (function () {
+      var theme = localStorage.getItem('theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <!-- Structured Data / Schema Markup -->
   <script type="application/ld+json">
@@ -24,8 +45,8 @@
       "@type": "Person",
       "name": "Michele Gentile",
       "alternateName": "MiViGe",
-      "jobTitle": "Software Engineer",
-      "description": "Software Engineer specializing in embedded systems and machine learning. Computer Science student at Sapienza University of Rome.",
+      "jobTitle": "Computer Science Student & Teaching Assistant",
+      "description": "Computer Science student at Sapienza University of Rome and Teaching Assistant, building things in embedded systems and machine learning.",
       "url": "https://mivige.github.io",
       "image": "https://mivige.github.io/assets/img/profile.jpg",
       "sameAs": [
@@ -59,14 +80,6 @@
           "name": "Rome",
           "addressCountry": "IT"
         },
-        "estimatedSalary": {
-          "@type": "MonetaryAmountDistribution",
-          "name": "Competitive",
-          "currency": "EUR",
-          "duration": "P1Y",
-          "minValue": 25000,
-          "maxValue": 45000
-        },
         "skills": [
           "Embedded Systems Development",
           "Machine Learning",
@@ -85,14 +98,14 @@
       "name": "Michele Gentile - Portfolio",
       "alternateName": "MiViGe Portfolio",
       "url": "https://mivige.github.io",
-      "description": "Personal portfolio website of Michele Gentile, Software Engineer specializing in embedded systems and machine learning.",
+      "description": "Personal portfolio website of Michele Gentile, Computer Science student and Teaching Assistant at Sapienza University of Rome, focused on embedded systems and machine learning.",
       "author": {
         "@type": "Person",
         "name": "Michele Gentile",
         "alternateName": "MiViGe"
       },
       "inLanguage": "en-US",
-      "copyrightYear": "2025",
+      "copyrightYear": "2026",
       "copyrightHolder": {
         "@type": "Person",
         "name": "Michele Gentile"
@@ -101,7 +114,6 @@
   </script>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -111,101 +123,262 @@
   </div>
 
   <div id="header-placeholder"></div>
-  <section id="home" data-aos="fade-right">
+  <noscript>
+    <nav style="text-align: center; padding: 1.5rem 1rem 0;">
+      <a href="/index.html">Home</a> &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="/project.html">Projects</a> &middot;
+      <a href="/cv.html">CV</a> &middot;
+      <a href="/blog/index.html">Blog</a> &middot;
+      <a href="/contact.html">Contacts</a>
+    </nav>
+  </noscript>
+  <!-- Hero -->
+  <section id="home" data-aos="fade-up">
+    <img src="/assets/img/profile.jpg" alt="Portrait of Michele Gentile" class="hero-photo">
+    <p class="hero-eyebrow">Hi, I'm</p>
     <h1>Michele Gentile</h1>
-    <p>Hi! I’m a Software Engineer specializing mostly in embedded systems and machine learning. Welcome to my personal
-      website.</p>
+    <p class="hero-tagline">Computer Science student at <strong>Sapienza University of Rome</strong> and
+      <strong>Teaching Assistant</strong>, building things in embedded systems and machine learning.</p>
+    <div class="hero-facts">
+      <span>📍 Rome, Italy</span>
+      <span>🎓 B.Sc. Computer Science</span>
+    </div>
     <div class="cta-container" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-      <a href="/project.html" class="cta-button">
-        View Projects
-      </a>
-      <a href="/cv.html" class="cta-button" style="background: rgba(255,255,255,0.8); color: var(--primary);">
+      <a href="/cv.html" class="cta-button">
         View CV
       </a>
+      <a href="/project.html" class="cta-button alt">
+        View Projects
+      </a>
+      <a href="/contact.html" class="cta-button alt">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+  <!-- Highlights
+  <section id="highlights" data-aos="fade-up">
+    <h2 style="text-align: center;">Highlights</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-value">3.87 / 4.0</span>
+        <span class="stat-label">GPA — B.Sc. Computer Science, Sapienza</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">Top 2.49%</span>
+        <span class="stat-label">Italian CS Olympics</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">2× 1st Place</span>
+        <span class="stat-label">Hackathon wins (BeMind & Hygenia)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">€60k+</span>
+        <span class="stat-label">Sponsorships secured for Sapienza Gladiators</span>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2 style="text-align: center;">About Me</h2>
+    <p style="text-align: center; max-width: 640px; margin: 0 auto;">I’m a passionate Computer Science student at
+      <strong>Sapienza University of Rome</strong>. My journey includes international experiences at
+      <strong>Universidade NOVA de Lisboa</strong> and <strong>Universitat de les Illes Balears</strong>, shaping my global perspective. I enjoy
+      spending time on practical problems and continuously learning new technologies. When I’m not coding, I love
+      hiking, running and motorcycling.</p>
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <a href="/about.html" class="cta-button alt">
+        More About Me
+      </a>
     </div>
   </section>
 
-  <section id="about" data-aos="fade-right">
-    <h2>About Me</h2>
-    <img src="assets/img/profile.jpg" alt="My Photo" class="profile-pic">
-    <p>I’m a passionate Computer Science student at <strong>Sapienza University of Rome</strong>. My journey includes
-      international experiences at <strong>Universidade NOVA de Lisboa</strong> and <strong>UIB</strong>, shaping my
-      global perspective. I enjoy spending time on practical problems and continuously learning new technologies. When
-      I’m not coding, I love hiking, running and motorcycling.</p>
+  <!-- What I Do -->
+  <section id="focus" data-aos="fade-up">
+    <h2 style="text-align: center;">What I Do</h2>
+    <div class="focus-grid">
+      <div class="project-card">
+        <h3>🔌 Embedded Systems</h3>
+        <p>Firmware and real-time software for physical systems, from Arduino prototypes to Simulink/Speedgoat
+          firmware for an autonomous racing vehicle.</p>
+      </div>
+      <div class="project-card">
+        <h3>🤖 Machine Learning</h3>
+        <p>Applied AI and ML fundamentals, coursework at NOVA Lisbon and hands-on builds like DeReK, an AI voice
+          agent created at Lisbon AI Week.</p>
+      </div>
+      <div class="project-card">
+        <h3>👨‍🏫 Teaching & Leadership</h3>
+        <p>Teaching Assistant for Methodologies of Programming at Sapienza, former C++ instructor, and lead of an
+          8-person marketing & design team.</p>
+      </div>
+    </div>
   </section>
-  <div style="text-align: center; margin-top: 0.5rem;">
-    <a href="/about.html" class="cta-button" style="background: rgba(255,255,255,0.8); color: var(--primary);">
-      Read More
-    </a>
-  </div>
 
-  <section id="portfolio" data-aos="fade-right">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <img src="assets/img/gladiators_logo.svg" alt="Portfolio Item 1" class="portfolio-img">
-        <div class="portfolio-content">
-          <h3>Sapienza Gladiators Racing Team</h3>
-          <p>Worked on the revamp of the website of the team, updating race results, prototypes, team presentations and
-            photo galleries for freshness, working closely with the team leadership to ensure that the website
-            effectively presented vital information, resources, and brand identity.
-            I also Ensured that the website was up-to-date with the latest versions of Next.js and optimized it by
-            leveraging Google Lighthouse to identify and address performance bottlenecks.</p>
-          <a href="https://sapienzagladiators.it/" target="_blank">Visit the Website</a>
+  <!-- Featured Projects -->
+  <section id="portfolio" data-aos="fade-up">
+    <h2 style="text-align: center;">Featured Projects</h2>
+    <div class="focus-grid">
+      <div class="project-card">
+        <h3>DeReK</h3>
+        <div class="tech-pills">
+          <span>Python</span>
+          <span>OpenAI API</span>
+        </div>
+        <p>AI voice agent that automates data and emotion detection during insurance calls. Built in 32 hours at
+          Lisbon AI Week.</p>
+        <div class="project-actions">
+          <a href="https://github.com/mivige/DeReK" target="_blank">View on GitHub →</a>
         </div>
       </div>
-      <!--<div class="portfolio-card">
-        <img src="portfolio2.jpg" alt="Portfolio Item 2" class="portfolio-img">
-        <div class="portfolio-content">
-          <h3>Portfolio Item Two</h3>
-          <p>Brief description of the portfolio item. Highlight features, context, and outcomes.</p>
-          <a href="#">View Details</a>
+      <div class="project-card">
+        <h3>PlantinoCare</h3>
+        <div class="tech-pills">
+          <span>Arduino</span>
+          <span>IoT</span>
         </div>
-      </div>-->
+        <p>Complete plant-management IoT system: sensors, Python middleware, MySQL and a live web dashboard. Built
+          for Arduino Day 2023.</p>
+        <div class="project-actions">
+          <a href="https://github.com/mivige/PlantinoCare" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Gladiators Website</h3>
+        <div class="tech-pills">
+          <span>Next.js</span>
+          <span>Lighthouse</span>
+        </div>
+        <p>Revamp of the Sapienza Gladiators Racing Team website: brand identity, race results and
+          performance-optimized Next.js.</p>
+        <div class="project-actions">
+          <a href="https://sapienzagladiators.it/" target="_blank">Visit the Website →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/project.html" class="cta-button alt">
+        See All Projects
+      </a>
     </div>
   </section>
 
-  <section id="technologies" data-aos="fade-right">
-    <h2>Technologies & Skills</h2>
-    <div class="tech-grid">
-      <span class="tech-badge">C++</span>
-      <span class="tech-badge">C</span>
-      <span class="tech-badge">Java</span>
-      <span class="tech-badge">Python</span>
-      <span class="tech-badge">PHP</span>
-      <span class="tech-badge">SQL</span>
-      <span class="tech-badge">JavaScript</span>
-      <span class="tech-badge">R</span>
-      <span class="tech-badge">Assembly MIPS</span>
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge">CSS</span>
-      <span class="tech-badge">React.js</span>
-      <span class="tech-badge">Next.js</span>
-      <span class="tech-badge">Docker</span>
-      <span class="tech-badge">Google Lighthouse</span>
-      <span class="tech-badge">Simulink</span>
-      <span class="tech-badge">Speedgoat</span>
-      <span class="tech-badge">MySQL</span>
-      <span class="tech-badge">PostgreSQL</span>
-      <span class="tech-badge">YugaByteDB</span>
-      <span class="tech-badge">Embedded systems</span>
-      <span class="tech-badge">Real-time operating systems</span>
-      <span class="tech-badge">Multicore programming</span>
-      <span class="tech-badge">Reverse engineering</span>
-      <span class="tech-badge">Arduino</span>
-      <span class="tech-badge">Nextion</span>
-      <span class="tech-badge">CAN Bus</span>
-      <span class="tech-badge">Actuators</span>
-      <span class="tech-badge">Sensors</span>
-      <span class="tech-badge">Windows PowerShell</span>
+  <!-- Experience & Education snapshot -->
+  <section id="experience" data-aos="fade-up">
+    <h2 style="text-align: center;">Experience & Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Mar 2026 - Present</span>
+          <h3>Teaching Assistant</h3>
+          <h4>Sapienza University of Rome - Methodologies of Programming</h4>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Apr 2024 - Present</span>
+          <h3>Head of Marketing & Design</h3>
+          <h4>Sapienza Gladiators Racing Team</h4>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Dec 2023 - Nov 2024</span>
+          <h3>Software Engineer</h3>
+          <h4>Sapienza Fast Charge Racing Team (autonomous vehicle firmware)</h4>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <span class="timeline-date">Sep 2023 - Present</span>
+          <h3>B.Sc. in Computer Science</h3>
+          <h4>Sapienza University of Rome with Erasmus+ at NOVA & UIB</h4>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/cv.html" class="cta-button alt">
+        See Full CV
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="technologies" data-aos="fade-up">
+    <h2 style="text-align: center;">Skills</h2>
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <div class="tech-grid">
+        <span class="tech-badge">C++</span>
+        <span class="tech-badge">C</span>
+        <span class="tech-badge">Java</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">R</span>
+        <span class="tech-badge">PHP</span>
+        <span class="tech-badge">Assembly MIPS</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Embedded & Systems</h3>
+      <div class="tech-grid">
+        <span class="tech-badge">Arduino</span>
+        <span class="tech-badge">Simulink</span>
+        <span class="tech-badge">Speedgoat</span>
+        <span class="tech-badge">CAN Bus</span>
+        <span class="tech-badge">Sensors & Actuators</span>
+        <span class="tech-badge">Real-time operating systems</span>
+        <span class="tech-badge">Multicore programming</span>
+        <span class="tech-badge">Nextion</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Web & Data</h3>
+      <div class="tech-grid">
+        <span class="tech-badge">React.js</span>
+        <span class="tech-badge">Next.js</span>
+        <span class="tech-badge">HTML</span>
+        <span class="tech-badge">CSS</span>
+        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">YugaByteDB</span>
+        <span class="tech-badge">Docker</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>Tools & Practices</h3>
+      <div class="tech-grid">
+        <span class="tech-badge">Google Lighthouse</span>
+        <span class="tech-badge">Windows PowerShell</span>
+        <span class="tech-badge">Reverse engineering</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact-cta" data-aos="fade-up">
+    <div class="contact-band">
+      <h2>Let's Get in Touch</h2>
+      <p>Open to internships, collaborations, and research opportunities... or just say hi!</p>
+      <div class="cta-container" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 0;">
+        <a href="mailto:michele.gentile2604@gmail.com" class="cta-button">
+          Email Me
+        </a>
+        <a href="/contact.html" class="cta-button alt">
+          All Contacts
+        </a>
+      </div>
     </div>
   </section>
 
   <div id="footer-placeholder"></div>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
     data-cf-beacon='{"token": "1e469c717a004f1fa8ff47b44364a917"}'></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
       duration: 800, // Animation duration
