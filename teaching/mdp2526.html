@@ -4,7 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina del tutoraggio di Metodologie di Programmazione (A.A. 2025-2026), Sapienza Università di Roma - esercitazioni, soluzioni, guide e FAQ. Corso concluso, materiale in archivio.">
   <title>Metodologie di Programmazione 25/26 | MiViGe</title>
+
+  <script>
+    // Apply the saved (or system) theme before CSS loads to avoid a flash
+    (function () {
+      var theme = localStorage.getItem('theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -22,32 +33,49 @@
   </div>
 
   <div id="header-placeholder"></div>
+  <noscript>
+    <nav style="text-align: center; padding: 1.5rem 1rem 0;">
+      <a href="/index.html">Home</a> &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="/project.html">Projects</a> &middot;
+      <a href="/cv.html">CV</a> &middot;
+      <a href="/blog/index.html">Blog</a> &middot;
+      <a href="/contact.html">Contacts</a>
+    </nav>
+  </noscript>
 
   <main style="padding-top: 100px; padding-bottom: 80px; overflow-x: hidden;">
 
     <section class="teaching-section">
-      <h1 style="text-align: center; margin-bottom: 1rem; color: #111;">Metodologie di Programmazione</h1>
-      <h3 style="text-align: center; color: #555; margin-bottom: 3rem;">A.A. 2025-2026 | TA: Michele Gentile</h3>
+      <h1 style="text-align: center; margin-bottom: 1rem; color: var(--text-strong);">Metodologie di Programmazione</h1>
+      <h3 style="text-align: center; color: var(--text-soft); margin-bottom: 2rem;">A.A. 2025-2026 | TA: Michele Gentile</h3>
+
+      <!-- Banner corso concluso -->
+      <div class="news-item" style="margin-bottom: 3rem; text-align: center;">
+        <div class="news-content">
+          <strong>Corso concluso (30 Giugno 2026).</strong> Questa pagina rimane attiva come archivio.
+        </div>
+      </div>
 
       <!-- Orari e Link -->
       <div id="info-generali" class="teaching-card">
         <h3>📌 Informazioni Generali</h3>
-        <p style="color: #444;">Benvenuti nella pagina dedicata al corso di tutoraggio di Metodologie di Programmazione.
+        <p style="color: var(--text);">Benvenuti nella pagina dedicata al corso di tutoraggio di Metodologie di Programmazione.
           Qui troverete risorse utili, guide e materiale extra per affrontare al meglio il corso e l'esame.</p>
 
         <div class="teaching-grid"
           style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
           <div>
-            <h4 style="color: #222; margin-bottom: 0.5rem;">Orari di Esercitazione e Supporto</h4>
-            <ul style="color: #444;">
+            <h4 style="color: var(--text-strong); margin-bottom: 0.5rem;">Orari di Esercitazione e Supporto</h4>
+            <ul style="color: var(--text);">
               <li><s>📅 <strong>Martedì:</strong> 17:00 - 19:00 (Esercitazione)</s></li>
               <li><s>📅 <strong>Giovedì:</strong> 17:00 - 19:00 (Sportello)</s></li>
-              <li>🔗 <a href="https://meet.google.com/vwj-zcgg-tpt" target="_blank">Link Diretto (Google Meet)</a></li>
+              <li style="opacity: 0.6;"><s>🔗 <a href="https://meet.google.com/vwj-zcgg-tpt" target="_blank">Link Diretto (Google Meet)</a></s></li>
             </ul>
           </div>
           <div>
-            <h4 style="color: #222; margin-bottom: 0.5rem;">Link Rapidi</h4>
-            <ul style="color: #444;">
+            <h4 style="color: var(--text-strong); margin-bottom: 0.5rem;">Link Rapidi</h4>
+            <ul style="color: var(--text);">
               <li>👨‍🏫 <a href="https://classroom.google.com/c/MjE5OTM3ODI3NjNa?cjc=z4qd6565" target="_blank">Google Classroom del Corso (Canale A-L)</a></li>
               <li>👨‍🏫 <a href="https://classroom.google.com/c/MjE5ODE2OTMxNjFa?cjc=cul42mdh" target="_blank">Google Classroom del Corso (Canale M-Z)</a></li>
               <li>✉️ <strong>Email TA:</strong> <a
@@ -88,7 +116,7 @@
             <span class="news-date">01 Giugno 2026</span>
             <div class="news-content">
               Per il mese di Giugno, gli incontri continueranno ad essere svolti online su Google Meet, ma saranno distinti per tipologia. 
-              <ul style="color: #444;list-style-type:disc; padding-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 0rem;">
+              <ul style="color: var(--text);list-style-type:disc; padding-left: 1.2rem; margin-top: 0.5rem; margin-bottom: 0rem;">
                 <li style="margin-bottom: 0.2rem;">Esercitazione: Martedì dalle 17:00 alle 19:00 (Durante i quali saranno proposti e svolti esercizi)</li>
                 <li style="margin-bottom: 0rem;">Sportello: Giovedì dalle 17:00 alle 19:00 (Potrete usare la sessione per chiarimenti, discutere di argomenti specifici o per fare domande)</li>
               </ul>
@@ -111,7 +139,7 @@
       <!-- Materiale Didattico Lezioni -->
       <div class="teaching-card">
         <h3>📚 Materiale Didattico</h3>
-        <p style="color: #444;">In questa sezione verranno caricati gli appunti, le slide, le esercitazioni e le soluzioni per ciascuno dei circa 8 incontri.</p>
+        <p style="color: var(--text);">In questa sezione sono raccolti gli appunti, le slide, le esercitazioni e le soluzioni di ciascuno degli incontri svolti.</p>
 
         <div class="lessons-list">
 
@@ -196,16 +224,16 @@
           </div>
 
           <!-- Placeholder per future lezioni -->
-          <!--<div class="lesson-row" style="opacity: 0.6; background: transparent; border: 1px dashed rgba(0,0,0,0.1);">
-            <div class="lesson-date" style="color: #777;">Lezione ... <span>Prossimamente</span></div>
-            <div class="lesson-topics" style="color: #777; font-style: italic;">Il materiale per le lezioni successive
+          <!--<div class="lesson-row" style="opacity: 0.6; background: transparent; border: 1px dashed var(--divider);">
+            <div class="lesson-date" style="color: var(--muted);">Lezione ... <span>Prossimamente</span></div>
+            <div class="lesson-topics" style="color: var(--muted); font-style: italic;">Il materiale per le lezioni successive
               verrà caricato man mano che procederà il corso...</div>
             <div class="lesson-links"></div>
           </div>-->
 
         </div>
 
-        <p style="color: #444; margin-top: 1rem;">Di seguito invece verranno pubblicati gli esercizi e le soluzioni dei laboratori del canale A-L curati da me.</p>
+        <p style="color: var(--text); margin-top: 1rem;">Di seguito invece trovate gli esercizi e le soluzioni dei laboratori del canale A-L curati da me.</p>
 
         <div class="lessons-list">
           <!-- Laboratorio 1 -->
@@ -229,20 +257,20 @@
           </div>
 
           <!-- Placeholder per futuri laboratori -->
-          <div class="lesson-row" style="opacity: 0.6; background: transparent; border: 1px dashed rgba(0,0,0,0.1);">
-            <div class="lesson-date" style="color: #777;">Lab. X...Y (Canale A-L) <span><!--Prossimamente--></span></div>
-            <div class="lesson-topics" style="color: #777; font-style: italic;">Il materiale per i laboratori non gestiti da me è disponibile sul Classroom del corso.</div>
+          <div class="lesson-row" style="opacity: 0.6; background: transparent; border: 1px dashed var(--divider);">
+            <div class="lesson-date" style="color: var(--muted);">Lab. X...Y (Canale A-L) <span><!--Prossimamente--></span></div>
+            <div class="lesson-topics" style="color: var(--muted); font-style: italic;">Il materiale per i laboratori non gestiti da me è disponibile sul Classroom del corso.</div>
             <div class="lesson-links"></div>
           </div>
         </div>
 
         <!-- Risorse Extra Integrate Sotto la Lista -->
         <!--<div class="extra-resources">
-          <h4 style="color: #222; margin-bottom: 1rem;">Risorse e Letture Extra</h4>
-          <ul style="color: #444;">
-            <li style="margin-bottom: 0.5rem;">⚠️ <strong style="color: #222;">Common Pitfalls:</strong> <a
+          <h4 style="color: var(--text-strong); margin-bottom: 1rem;">Risorse e Letture Extra</h4>
+          <ul style="color: var(--text);">
+            <li style="margin-bottom: 0.5rem;">⚠️ <strong style="color: var(--text-strong);">Common Pitfalls:</strong> <a
                 href="#">Lista degli errori tipici in Java e come evitarli (PDF)</a></li>
-            <li style="margin-bottom: 0.5rem;">📖 <strong style="color: #222;">Letture Consigliate:</strong>
+            <li style="margin-bottom: 0.5rem;">📖 <strong style="color: var(--text-strong);">Letture Consigliate:</strong>
               <ul style="margin-top: 0.3rem;">
                 <li><a href="#" target="_blank">I principi S.O.L.I.D. spiegati in modo semplice</a></li>
                 <li><a href="#" target="_blank">Clean Code: perché è importante fin da subito</a></li>
@@ -259,23 +287,23 @@
         <!-- Guide al Setup -->
         <div class="teaching-card" style="margin-bottom: 0;">
           <h3>🛠️ Guide al Setup</h3>
-          <ul style="color: #444;">
+          <ul style="color: var(--text);">
             <li class="guide-step">
-              <strong style="color: #222;">1. JDK (Java Development Kit)</strong><br>
-              <span style="color: #555; font-size: 0.95rem;">Installazione di Java e variabili d'ambiente.</span>
+              <strong style="color: var(--text-strong);">1. JDK (Java Development Kit)</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.95rem;">Installazione di Java e variabili d'ambiente.</span>
               <br><a target="_blank" href="materials/mdp2526/JDK_MiViGe.pdf"
                 class="btn-resource" style="margin-top: 0.5rem;">📄 Introduzione al JDK</a>
             </li>
             <li class="guide-step">
-              <strong style="color: #222;">2. Scelta dell'IDE</strong><br>
-              <span style="color: #555; font-size: 0.95rem;">Nei computer dei laboratori è installato Eclipse, ma è possibile utilizzare qualunque IDE.</span>
+              <strong style="color: var(--text-strong);">2. Scelta dell'IDE</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.95rem;">Nei computer dei laboratori è installato Eclipse, ma è possibile utilizzare qualunque IDE.</span>
               <div style="margin-top: 0.5rem;">
                 <a target="_blank" href="https://eclipseide.org/" class="btn-resource">Eclipse</a>
               </div>
             </li>
             <li class="guide-step">
-              <strong style="color: #222;">3. Build Tools</strong><br>
-              <span style="color: #555; font-size: 0.95rem;">Inizializzare progetti e dipendenze con Maven.</span>
+              <strong style="color: var(--text-strong);">3. Build Tools</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.95rem;">Inizializzare progetti e dipendenze con Maven.</span>
               <br><a target="_blank" href="materials/mdp2526/ApacheMaven_MiViGe.pdf" class="btn-resource" style="margin-top: 0.5rem;">📄 Introduzione a Maven</a>
             </li>
           </ul>
@@ -284,31 +312,31 @@
         <!-- Cheat Sheets -->
         <div class="teaching-card" style="margin-bottom: 0;">
           <h3>📋 Risorse Extra</h3>
-          <ul style="color: #444; margin-top: 1rem;">
+          <ul style="color: var(--text); margin-top: 1rem;">
             <!--<li style="margin-bottom: 1.2rem;">
-              <strong style="color: #222;">Sintassi e Collezioni</strong><br>
-              <span style="color: #555; font-size: 0.9rem;">Costrutti principali, List, Set, Map in Java.</span><br>
+              <strong style="color: var(--text-strong);">Sintassi e Collezioni</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.9rem;">Costrutti principali, List, Set, Map in Java.</span><br>
               <a href="#">📄 Sintassi Java (PDF)</a>
             </li>
             <li style="margin-bottom: 1.2rem;">
-              <strong style="color: #222;">Diagrammi UML</strong><br>
-              <span style="color: #555; font-size: 0.9rem;">Class diagram, Use case, Sequence diagram.</span><br>
+              <strong style="color: var(--text-strong);">Diagrammi UML</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.9rem;">Class diagram, Use case, Sequence diagram.</span><br>
               <a href="#">📄 Guida UML (PDF)</a>
             </li>
             <li style="margin-bottom: 1.2rem;">
-              <strong style="color: #222;">Design Pattern</strong><br>
-              <span style="color: #555; font-size: 0.9rem;">Creazionali, Strutturali, Comportamentali.</span><br>
+              <strong style="color: var(--text-strong);">Design Pattern</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.9rem;">Creazionali, Strutturali, Comportamentali.</span><br>
               <a href="#">📄 Pattern Gang of Four (PDF)</a>
             </li>-->
             <li style="margin-bottom: 1.2rem;">
-              <strong style="color: #222;">Appunti del corso (2024)</strong><br>
-              <span style="color: #555; font-size: 0.9rem;">Appunti comprensivi del corso di Metodologie di Programmazione (2024) di Alessia Cassetta.</span><br>
+              <strong style="color: var(--text-strong);">Appunti del corso (2024)</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.9rem;">Appunti comprensivi del corso di Metodologie di Programmazione (2024) di Alessia Cassetta.</span><br>
               <a
                 href="https://github.com/ajhxia/UNI/blob/main/Primo%20Anno/Metodologie%20di%20Programmazione/Teoria/Metodologie_di_Programmazione.pdf">📄 Appunti (PDF)</a>
             </li>
             <li style="margin-bottom: 1.2rem;">
-              <strong style="color: #222;">JPokeBattle (2024)</strong><br>
-              <span style="color: #555; font-size: 0.9rem;">Il mio progetto per Metodologie di Programmazione (2024). Utile per vedere l'applicazione pratica di tutte le nozioni apprese e le best practices nello sviluppo di grandi progetti.</span><br>
+              <strong style="color: var(--text-strong);">JPokeBattle (2024)</strong><br>
+              <span style="color: var(--text-soft); font-size: 0.9rem;">Il mio progetto per Metodologie di Programmazione (2024). Utile per vedere l'applicazione pratica di tutte le nozioni apprese e le best practices nello sviluppo di grandi progetti.</span><br>
               <a
                 href="https://github.com/mivige/JPokeBattle" target="_blank">💻 GitHub Repo</a>
             </li>
@@ -320,7 +348,7 @@
       <!-- FAQ Modalità d'Esame -->
       <div class="teaching-card">
         <h3>❓ FAQ</h3>
-        <p style="margin-bottom: 1.5rem; color: #444;">Risposte alle domande più frequenti ricevute durante gli incontri. <em style="color:#666;">(Sezione in aggiornamento)</em></p>
+        <p style="margin-bottom: 1.5rem; color: var(--text);">Risposte alle domande più frequenti ricevute durante gli incontri.</p>
 
         <!--<div class="faq-item">
           <div class="faq-question">D: Quale IDE è consigliato per il progetto?</div>
