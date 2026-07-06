@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Michele Gentile (MiViGe) - About Me">
+  <meta name="description" content="About Michele Gentile (MiViGe) - my journey from high school coding competitions to Sapienza University, racing teams, teaching, and life off the keyboard.">
   <title>About Me | MiViGe</title>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Me | MiViGe">
+  <meta property="og:description" content="My journey from high school coding competitions to Sapienza University, racing teams, teaching, and life off the keyboard.">
+  <meta property="og:url" content="https://mivige.github.io/about.html">
+  <meta property="og:image" content="https://mivige.github.io/assets/img/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About Me | MiViGe">
+  <meta name="twitter:description" content="My journey from high school coding competitions to Sapienza University, racing teams, teaching, and life off the keyboard.">
+  <meta name="twitter:image" content="https://mivige.github.io/assets/img/profile.jpg">
+
+  <script>
+    // Apply the saved (or system) theme before CSS loads to avoid a flash
+    (function () {
+      var theme = localStorage.getItem('theme')
+        || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <link rel="icon" type="image/x-icon" href="/assets/img/icons/favicon.ico">
-  
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -21,13 +42,23 @@
   </div>
 
   <div id="header-placeholder"></div>
+  <noscript>
+    <nav style="text-align: center; padding: 1.5rem 1rem 0;">
+      <a href="/index.html">Home</a> &middot;
+      <a href="/about.html">About</a> &middot;
+      <a href="/project.html">Projects</a> &middot;
+      <a href="/cv.html">CV</a> &middot;
+      <a href="/blog/index.html">Blog</a> &middot;
+      <a href="/contact.html">Contacts</a>
+    </nav>
+  </noscript>
 
   <main style="padding-top: 100px; padding-bottom: 80px; overflow-x: hidden;">
     
     <!-- Hero Banner Section -->
     <section class="about-section" data-aos="fade-up" style="max-width: 1200px;">
       <div class="about-hero">
-        <img src="assets/img/banner.jpg" alt="Michele Gentile at the PC" class="about-hero-img">
+        <img src="/assets/img/banner.jpg" alt="Michele Gentile at the PC" class="about-hero-img">
         <div class="about-hero-overlay"></div>
         <div class="about-hero-content">
           <h1>My Story</h1>
@@ -42,7 +73,7 @@
       
       <div class="profile-story-container">
         <div class="profile-story-img-wrapper" data-aos="fade-right" data-aos-delay="100">
-          <img src="assets/img/profile.jpg" alt="Michele Gentile Profile Picture" class="profile-story-img">
+          <img src="/assets/img/profile.jpg" alt="Michele Gentile Profile Picture" class="profile-story-img" loading="lazy">
         </div>
         
         <div class="profile-story-text" data-aos="fade-left" data-aos-delay="200">
@@ -73,7 +104,7 @@
         <!-- Running Card -->
         <article class="strava-card" data-aos="zoom-in" data-aos-delay="100">
           <div class="strava-img-container">
-            <img src="assets/img/running.jpg" alt="Running the Half Marathon" class="strava-img">
+            <img src="/assets/img/running.jpg" alt="Running the Half Marathon" class="strava-img" loading="lazy">
             <span class="strava-type-badge">
               Run
             </span>
@@ -102,7 +133,7 @@
         <!-- Trekking Card -->
         <article class="strava-card" data-aos="zoom-in" data-aos-delay="200">
           <div class="strava-img-container">
-            <img src="assets/img/trekking.jpg" alt="Trekking the Fishermen's Trail" class="strava-img">
+            <img src="/assets/img/trekking.jpg" alt="Trekking the Fishermen's Trail" class="strava-img" loading="lazy">
             <span class="strava-type-badge" style="background: #2E8B57;">
               Trekking
             </span>
