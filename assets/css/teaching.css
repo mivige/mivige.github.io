@@ -149,6 +149,94 @@
   border-top: 1px dashed var(--divider, rgba(0,0,0,0.1));
 }
 
+/* Teaching dashboard: Academic / Private tab switch */
+.teaching-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border, rgba(0,0,0,0.1));
+  background: var(--glass-soft, rgba(255,255,255,0.4));
+  color: var(--text, #333);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tab-btn:hover {
+  border-color: var(--primary, #0ea5a4);
+  color: var(--primary-600, #0b948f);
+}
+.tab-btn.active {
+  background: var(--primary, #0ea5a4);
+  border-color: var(--primary, #0ea5a4);
+  color: #fff;
+}
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+/* Collapsible card (Past Courses dropdown) */
+details.teaching-card > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+details.teaching-card > summary::-webkit-details-marker {
+  display: none;
+}
+details.teaching-card > summary h3 {
+  margin: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+details.teaching-card .dropdown-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--primary, #0ea5a4);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+details.teaching-card > summary:hover .dropdown-arrow {
+  transform: translateY(2px);
+}
+details.teaching-card[open] .dropdown-arrow,
+details.teaching-card[open] > summary:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+details.teaching-card[open] > summary {
+  border-bottom: 1px solid var(--divider, rgba(0, 0, 0, 0.05));
+  padding-bottom: 0.5rem;
+}
+
+/* Course rows in the dashboard: title | academic year | university */
+.lesson-row.course-row {
+  grid-template-columns: 1fr auto auto;
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+}
+.course-row .course-title {
+  color: var(--text-strong, #222);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.course-row .course-meta {
+  color: var(--muted, #666);
+  font-size: 0.9rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .teaching-grid {
@@ -157,5 +245,9 @@
   .lesson-row {
     grid-template-columns: 1fr;
     gap: 0.8rem;
+  }
+  .lesson-row.course-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
   }
 }
